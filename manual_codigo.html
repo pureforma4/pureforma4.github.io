@@ -60,8 +60,8 @@
                 <li class="scroll-to-link active" data-target="inicio">
                     <a>Inicio</a>
                 </li>
-                <li class="scroll-to-link" data-target="registro_usuarios">
-                    <a>Registro de usuarios</a>
+                <li class="scroll-to-link" data-target="interfazGenericDAO">
+                    <a>Interfaz GenericDAO</a>
                 </li>
                 <li class="scroll-to-link" data-target="content-errors">
                     <a>Errors</a>
@@ -73,23 +73,87 @@
 
     <div class="content-page">
         <div class="content">
-            <div class="overflow-hidden content-section" id="inicio">
-                <h1>Inicio</h1>
+            <div class="overflow-hidden content-section" id="interfazGenericDAO">
+                <!--DIV DONDE METER TODO EL CÓDIGO COMENTADO-->
+                <h1>Interfaz GenericDAO</h1>
                 <p>
-                    PUREFORMA es una aplicación Java diseñada para uso de clientes de una tienda de ropa. Esta
-                    aplicación nos permitirá realizar acciones comunes de cualquier aplicación y a su vez acciones
-                    comunes de una tienda.
+                    La interfaz <code>GenericDAO</code> define una serie de métodos estándar para realizar operaciones
+                    básicas de acceso a datos en una base de datos. Esta interfaz puede ser utilizada como un contrato
+                    genérico para operaciones CRUD en cualquier tipo de entidad (<code>T</code>).
                 </p>
-                <ul>
-                    <li>Registro de usuarios.</li>
-                    <li>Inicio de sesión de usuarios.</li>
-                    <li>Acceder con distintos tipos de ROL al aplicativo (Admin o User).</li>
-                    <li>Listar artículos de ropa.</li>
-                    <li>Añadir productos al carrito.</li>
-                    <li>Emular compras de los productos del carrito.</li>
-                </ul>
+
+                <h3>Métodos:</h3>
+
+                <ol>
+                    <li>
+                        <h4><code>void insert(T entidad);</code></h4>
+                        <p>Este método se utiliza para insertar una nueva entidad en la base de datos. Debes
+                            proporcionar un objeto de tipo <code>T</code> que representa la entidad que deseas
+                            almacenar.</p>
+                    </li>
+                    <li>
+                        <h4><code>T getById(Integer id);</code></h4>
+                        <p>Recupera una entidad de la base de datos basándose en el ID proporcionado. El método devuelve
+                            un objeto de tipo <code>T</code> correspondiente al ID especificado.</p>
+                    </li>
+                    <li>
+                        <h4><code>List<T> getAll();</code></h4>
+                        <p>Retorna una lista de todas las entidades presentes en la base de datos. Este método es útil
+                            cuando necesitas obtener todas las filas de una tabla en la base de datos.</p>
+                    </li>
+                    <li>
+                        <h4><code>void update(T entidad);</code></h4>
+                        <p>Actualiza una entidad existente en la base de datos. Debes proporcionar un objeto de tipo
+                            <code>T</code> con los nuevos valores que deseas actualizar en la base de datos.</p>
+                    </li>
+                    <li>
+                        <h4><code>void delete(Integer id);</code></h4>
+                        <p>Elimina una entidad de la base de datos basándose en el ID proporcionado. Este método elimina
+                            la fila correspondiente a la entidad con el ID especificado.</p>
+                    </li>
+                </ol>
             </div>
-            
+
+            <div class="overflow-hidden content-section" id="interfazGenericDAO">
+                <!--DIV DONDE METER TODO EL CÓDIGO COMENTADO-->
+                <h1>Interfaz GenericDAO</h1>
+                <p>
+                    La interfaz <code>GenericDAO</code> define una serie de métodos estándar para realizar operaciones
+                    básicas de acceso a datos en una base de datos. Esta interfaz puede ser utilizada como un contrato
+                    genérico para operaciones CRUD en cualquier tipo de entidad (<code>T</code>).
+                </p>
+
+                <h3>Métodos:</h3>
+
+                <ol>
+                    <li>
+                        <h4><code>void insert(T entidad);</code></h4>
+                        <p>Este método se utiliza para insertar una nueva entidad en la base de datos. Debes
+                            proporcionar un objeto de tipo <code>T</code> que representa la entidad que deseas
+                            almacenar.</p>
+                    </li>
+                    <li>
+                        <h4><code>T getById(Integer id);</code></h4>
+                        <p>Recupera una entidad de la base de datos basándose en el ID proporcionado. El método devuelve
+                            un objeto de tipo <code>T</code> correspondiente al ID especificado.</p>
+                    </li>
+                    <li>
+                        <h4><code>List<T> getAll();</code></h4>
+                        <p>Retorna una lista de todas las entidades presentes en la base de datos. Este método es útil
+                            cuando necesitas obtener todas las filas de una tabla en la base de datos.</p>
+                    </li>
+                    <li>
+                        <h4><code>void update(T entidad);</code></h4>
+                        <p>Actualiza una entidad existente en la base de datos. Debes proporcionar un objeto de tipo
+                            <code>T</code> con los nuevos valores que deseas actualizar en la base de datos.</p>
+                    </li>
+                    <li>
+                        <h4><code>void delete(Integer id);</code></h4>
+                        <p>Elimina una entidad de la base de datos basándose en el ID proporcionado. Este método elimina
+                            la fila correspondiente a la entidad con el ID especificado.</p>
+                    </li>
+                </ol>
+            </div>
         </div>
     </div>
     <!-- Github Corner Ribbon - to remove (Ribbon created with : http://tholman.com/github-corners/ )-->
