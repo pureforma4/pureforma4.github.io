@@ -418,6 +418,9 @@ body.one-content-column-version .content h6 {
 body.one-content-column-version p {
     color: #D6F0F0;
 }
+body.one-content-column-version ul {
+    color: #D6F0F0;
+}
 body.one-content-column-version .content table td {
     color: #D6F0F0;
 }
