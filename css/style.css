@@ -85,7 +85,10 @@ p, .content ul, .content ol{
     margin-bottom: 1.3em;
     clear: both;
 }
-
+img {
+    padding-left: 5%;
+    padding-top: 1%;
+}
 code,
 pre{
     font-family: 'Source Code Pro', monospace;

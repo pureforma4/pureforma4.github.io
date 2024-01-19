@@ -9,7 +9,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>API - Documentation</title>
+    <title>Documentación PureForma</title>
     <meta name="description" content="">
     <meta name="author" content="ticlekiwi">
 
@@ -36,7 +36,7 @@
             <div class="logo">
                 <img alt="platform by Emily van den Heever from the Noun Project"
                     title="platform by Emily van den Heever from the Noun Project" src="images/logo.png" height="32" />
-                <span>API Documentation</span>
+                <span><a href="index.html" style="text-decoration: none;">PureForma</a></span>
             </div>
             <button class="burger-menu-icon" id="button-menu-mobile">
                 <svg width="34" height="34" viewBox="0 0 100 100">
@@ -57,14 +57,17 @@
                 <div class="info"><b>Last Updated:</b> 21 Enero, 2024</div>
             </div>
             <ul>
-                <li class="scroll-to-link active" data-target="inicio">
-                    <a>Inicio</a>
+                <li class="scroll-to-link active" data-target="introduccion">
+                    <a>Introducción</a>
+                </li>
+                <li class="scroll-to-link" data-target="welcome">
+                    <a>Ventana Principal</a>
                 </li>
                 <li class="scroll-to-link" data-target="registro_usuarios">
                     <a>Registro de usuarios</a>
                 </li>
-                <li class="scroll-to-link" data-target="content-errors">
-                    <a>Errors</a>
+                <li class="scroll-to-link" data-target="iniciar_sesion">
+                    <a>Iniciar sesión</a>
                 </li>
             </ul>
         </div>
@@ -73,23 +76,82 @@
 
     <div class="content-page">
         <div class="content">
-            <div class="overflow-hidden content-section" id="inicio">
-                <h1>Inicio</h1>
-                <p>
-                    PUREFORMA es una aplicación Java diseñada para uso de clientes de una tienda de ropa. Esta
-                    aplicación nos permitirá realizar acciones comunes de cualquier aplicación y a su vez acciones
-                    comunes de una tienda.
-                </p>
-                <ul>
-                    <li>Registro de usuarios.</li>
-                    <li>Inicio de sesión de usuarios.</li>
-                    <li>Acceder con distintos tipos de ROL al aplicativo (Admin o User).</li>
-                    <li>Listar artículos de ropa.</li>
-                    <li>Añadir productos al carrito.</li>
-                    <li>Emular compras de los productos del carrito.</li>
-                </ul>
+            <div class="overflow-hidden content-section" id="introduccion">
+                <h2>Introducción</h2>
+                <p>Este manual proporciona instrucciones detalladas sobre el uso eficiente de la aplicación de tienda de
+                    ropa. A lo largo de este documento,
+                    encontrarás información esencial para realizar acciones clave, como iniciar sesión, registrar un
+                    nuevo usuario y acceder a la documentación en línea.
+                    Cada sección aborda de manera exhaustiva los pasos necesarios para aprovechar al máximo las
+                    funcionalidades de la aplicación,
+                    asegurando una experiencia fluida y segura. ¡Descubre cómo gestionar tu cuenta y explorar las
+                    características únicas diseñadas para mejorar tu experiencia de compra.</p>
             </div>
-            
+            <div class="overflow-hidden content-section" id="welcome">
+                <h2>1. Ventana Principal</h2>
+                <p>La ventana principal de la aplicación te ofrece diversas funcionalidades para gestionar tu
+                    experiencia.</p>
+
+                <img src="images/manual_uso/welcome.jpg" alt="Descripción de la imagen" width="900" height="600">
+
+
+                <h3>1.1 Registrar Usuario</h3>
+                <p>Esta opción te permitirá realizar el registro del usuario en la aplicación. x</p>
+                <h3>1.2 Iniciar Sesión</h3>
+                <p>Para acceder a tu cuenta, selecciona "Sign In". Ingresa tu <strong>username</strong>
+                    y <strong>contraseña</strong> en los campos correspondientes. Estos datos serán verificados con
+                    la
+                    información almacenada en la base de datos remota. Si son correctos, obtendrás acceso a las
+                    funcionalidades exclusivas de la aplicación.</p>
+
+                
+
+                <h3>1.3 Acceder a la Documentación Online</h3>
+                <p>Si necesitas información adicional sobre el uso de la aplicación, selecciona "Acceder a la
+                    Documentación Online". Esto te dirigirá a recursos en línea donde podrás encontrar guías
+                    detalladas,
+                    tutoriales y otras ayudas relacionadas con la aplicación.</p>
+            </div>
+
+            <div class="overflow-hidden content-section" id="registro_usuarios">
+                <h2>2. Registro de Usuarios</h2>
+                <p>El proceso de registro es crucial para personalizar tu experiencia y garantizar la seguridad de
+                    tu
+                    cuenta:</p>
+                <ul>
+                    <li><strong>Username:</strong> Selecciona un nombre único que te identifique de manera exclusiva en
+                        la aplicación.</li>
+                    <li><strong>Password:</strong> Elige una contraseña segura que combine letras, números y
+                        caracteres
+                        especiales.</li>
+                    <li><strong>Name y Surname:</strong> Proporciona tu nombre y apellido para una experiencia
+                        personalizada.</li>
+                    <li><strong>Address:</strong> Ingresa tu dirección para facilitar el proceso de envío en caso de
+                        compras.</li>
+                    <li><strong>Telephone:</strong> Proporciona un número de teléfono válido para posibles
+                        comunicaciones y actualizaciones.</li>
+                    <li><strong>Email:</strong> Ingresa una dirección de correo electrónico válida y de uso
+                        frecuente.
+                    </li>
+                </ul>
+                <p>Después de completar estos campos, la aplicación cifrará tu contraseña y almacenará todos los
+                    datos
+                    de manera segura en la base de datos remota, asegurando la confidencialidad de tu información
+                    personal.</p>
+            </div>
+
+            <div class="overflow-hidden content-section" id="iniciar_sesion">
+                <h2>3. Iniciar Sesión</h2>
+                <p>Para acceder a tu cuenta existente, selecciona "Iniciar Sesión". Ingresa tu <strong>nombre de
+                        usuario</strong> y <strong>contraseña</strong> en los campos correspondientes. La aplicación
+                    verificará la autenticidad de tus credenciales con la información almacenada en la base de datos
+                    remota. Si la verificación es exitosa, tendrás acceso a todas las funcionalidades de la
+                    aplicación
+                    diseñadas para mejorar tu experiencia de compra.</p>
+            </div>
+            <div class="overflow-hidden content-section" id="espacio">
+                <p></p>
+            </div>
         </div>
     </div>
     <!-- Github Corner Ribbon - to remove (Ribbon created with : http://tholman.com/github-corners/ )-->
