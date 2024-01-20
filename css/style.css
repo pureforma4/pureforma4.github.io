@@ -68,7 +68,7 @@ i{
 .scroll-to-link{
     cursor: pointer;
 }
-p, .content ul, .content ol{
+p, .content ul, .content ol, .content ul li ol{
     font-size: 14px;
     color: #777A7A;
     margin-bottom: 16px;
