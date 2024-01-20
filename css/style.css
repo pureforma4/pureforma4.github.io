@@ -425,6 +425,9 @@ body.one-content-column-version p {
 body.one-content-column-version ul {
     color: #D6F0F0;
 }
+body.one-content-column-version ul li ol {
+    color: #D6F0F0;
+}
 body.one-content-column-version .content table td {
     color: #D6F0F0;
 }
