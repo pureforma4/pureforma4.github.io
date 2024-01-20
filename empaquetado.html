@@ -57,14 +57,8 @@
                 <div class="info"><b>Last Updated:</b> 21 Enero, 2024</div>
             </div>
             <ul>
-                <li class="scroll-to-link active" data-target="empaquetado">
+                <li class="scroll-to-link active" data-target="package">
                     <a>Empaquetado</a>
-                </li>
-                <li class="scroll-to-link" data-target="registro_usuarios">
-                    <a>Registro de usuarios</a>
-                </li>
-                <li class="scroll-to-link" data-target="content-errors">
-                    <a>Errors</a>
                 </li>
             </ul>
         </div>
@@ -73,22 +67,26 @@
 
     <div class="content-page">
         <div class="content">
-            <div class="overflow-hidden content-section" id="empaquetado">
+            <div class="overflow-hidden content-section" id="package">
                 <h1>Empaquetado</h1>
                 <p>
-                    Para realizar el empaquetado de nuestra aplicación haremos click derecho en nuestro proyecto
+                    Para realizar el empaquetado de nuestra aplicación se han seguido los siguientes pasos.
                 </p>
-                <img alt="export" title="export" src="images/manual_empaquetado/export.jpg"/>
                 <ul>
-                    <li>Registro de usuarios.</li>
-                    <li>Inicio de sesión de usuarios.</li>
-                    <li>Acceder con distintos tipos de ROL al aplicativo (Admin o User).</li>
-                    <li>Listar artículos de ropa.</li>
-                    <li>Añadir productos al carrito.</li>
-                    <li>Emular compras de los productos del carrito.</li>
+                    <li>Click derecho en el proyecto y seleccionamos la opcion "Export...".</li>
+                    <img alt="export" title="export" src="images/manual_empaquetado/export.png"/>
+                    <li>Seleccionamos "Java -> Runnable JAR file" y clicamos en next.</li>
+                    <img alt="pop-up_export" title="pop-up_export" src="images/manual_empaquetado/pop-up_export.png"/>
+                    <li>Configuramos las especificaciones que tendrá el RJF (Runnable JAR File) y clicamos en "Finish". 
+                    <img alt="runnable_specs" title="runnable_specs" src="images/manual_empaquetado/runnable_specs.png"/>
+                        <ol>
+                            <li>Launch configurations: seleccionamos el archivo encargado de lanzar la aplicación</li>
+                            <li>Export destination: seleccionamos la ubicacion en la que queremos que se almacena nuestra app empaquetada</li>
+                            <li>Library handling: seleccionamos de qué manera queremos empaquetar las librerias utilizadas por nuestra aplicación</li>
+                        </ol>
+                    </li>
                 </ul>
             </div>
-            
         </div>
     </div>
     <!-- Github Corner Ribbon - to remove (Ribbon created with : http://tholman.com/github-corners/ )-->
