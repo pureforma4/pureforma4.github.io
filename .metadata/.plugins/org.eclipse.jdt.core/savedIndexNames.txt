@@ -1,0 +1,7 @@
+INDEX VERSION 1.134+C:\desarrollo\proyectos\pureforma4.github.io\.metadata\.plugins\org.eclipse.jdt.core
+3446759953.index
+3570706705.index
+3684965306.index
+2121005335.index
+1865797976.index
+1188513068.index
