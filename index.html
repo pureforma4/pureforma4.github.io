@@ -9,7 +9,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>API - Documentation</title>
+    <title>Documentación PureForma</title>
     <meta name="description" content="">
     <meta name="author" content="ticlekiwi">
 
@@ -72,9 +72,6 @@
                 <li class="scroll-to-link" data-target="manual_codigo">
                     <a>Manual de Código</a>
                 </li>
-                <li class="scroll-to-link" data-target="content-errors">
-                    <a>Errors</a>
-                </li>
             </ul>
         </div>
     </div>
@@ -121,134 +118,45 @@
 
             </div>
             <div class="overflow-hidden content-section" id="ejecucion_app">
-                <h1><a href="ejecucion.html">Requisitos de la aplicación</a></h1>
+                <h1><a href="ejecucion.html">Ejecución de la aplicación</a></h1>
                 <p>
-                    Para poder realizar la ejecución de la aplicación multiplataforma deberemos de cumpliar algunos requisitos.
-                    La instalación y configuración de los requisitos puedes encontrarla <a href="ejecucion.html">aquí</a>.
+                    La correcta ejecución de la aplicación multiplataforma requiere el cumplimiento de ciertos requisitos previos, así como la instalación y configuración adecuada de los componentes esenciales. 
+                    
+                </p>
+                <p>
+                    Para obtener información detallada sobre la instalación y configuración de la aplicación y su ejecución, consulte la documentación en el siguiente <a href="ejecucion.html">enlace</a>.
                 </p>
 
             </div>
             <div class="overflow-hidden content-section" id="manual_uso">
                 <h2><a href="manual_uso.html">Guía de Usuario de la Aplicación</a></h2>
                 <p>
-                    Para hacer el uso de la aplicación los usuarios necesitarán primero que nada registrarse en ella.
+                    Bienvenido al Manual de Uso de nuestra plataforma de tienda de ropa. Este documento, de carácter esencial y profesional, se presenta como una guía detallada 
+                    para los usuarios que buscan aprovechar al máximo las funcionalidades de nuestra aplicación. Aquí encontrarás instrucciones precisas y 
+                    claras sobre cómo explorar nuestro catálogo, realizar transacciones seguras y personalizar tu experiencia de compra. 
+                    Este manual refleja nuestro compromiso con una interacción seria, fluida y confiable, garantizando que tu experiencia en nuestra 
+                    plataforma sea satisfactoria y sin contratiempos.
+                    
                 </p>
                 <p>
-                    Para poder realizar el registro seguiremos los siguientes pasos:
+                    Para visualizar este manual y realizar la revisión del mismo puedes hacer clic <a href="manual_uso.html">aquí</a>.
                 </p>
-                <br>
-                <h4>Tabla usuarios</h4>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Field</th>
-                            <th>Type</th>
-                            <th>Description</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>secret_key</td>
-                            <td>String</td>
-                            <td>Your API key.</td>
-                        </tr>
-                        <tr>
-                            <td>search</td>
-                            <td>String</td>
-                            <td>(optional) A search word to find character by name.</td>
-                        </tr>
-                        <tr>
-                            <td>house</td>
-                            <td>String</td>
-                            <td>
-                                (optional) a string array of houses:
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>alive</td>
-                            <td>Boolean</td>
-                            <td>
-                                (optional) a boolean to filter alived characters
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>gender</td>
-                            <td>String</td>
-                            <td>
-                                (optional) a string to filter character by gender:<br> m: male<br> f: female
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>offset</td>
-                            <td>Integer</td>
-                            <td>(optional - default: 0) A cursor for use in pagination. Pagination starts offset the
-                                specified offset.</td>
-                        </tr>
-                        <tr>
-                            <td>limit</td>
-                            <td>Integer</td>
-                            <td>(optional - default: 10) A limit on the number of objects to be returned, between 1 and
-                                100.</td>
-                        </tr>
-                    </tbody>
-                </table>
             </div>
             <div class="overflow-hidden content-section" id="manual_codigo">
                 <h1><a href="manual_codigo.html">Manual del Código</a></h1>
                 <p>
-                    Manual aplicación <a href="ejecucion.html">aquí</a>.
+                    En este apartado, exploraremos el núcleo técnico de nuestro proyecto de tienda: el Manual de Código. Este documento representa la brújula 
+                    que guía a nuestros desarrolladores a través de las complejidades de la arquitectura y la implementación. Aquí, se establecen las directrices,
+                    estándares y patrones de codificación que definen la base de nuestro sistema. Sumérgete en estas páginas para comprender la esencia de nuestro 
+                    enfoque disciplinado y serio hacia el desarrollo, donde cada línea de código refleja nuestro compromiso con la excelencia técnica en el mundo de la moda digital.
+                </p>
+                <p>
+                    Puedes encontrar el manual del código <a href="ejecucion.html">aquí</a>.
                 </p>
 
             </div>
-            <div class="overflow-hidden content-section" id="borrar">
-                <h2>Errors</h2>
-                <p>
-                    The Westeros API uses the following error codes:
-                </p>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Error Code</th>
-                            <th>Meaning</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>X000</td>
-                            <td>
-                                Some parameters are missing. This error appears when you don't pass every mandatory
-                                parameters.
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>X001</td>
-                            <td>
-                                Unknown or unvalid <code class="higlighted">secret_key</code>. This error appears if you
-                                use an unknow API key or if your API key expired.
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>X002</td>
-                            <td>
-                                Unvalid <code class="higlighted">secret_key</code> for this domain. This error appears
-                                if you use an API key non specified for your domain. Developper or Universal API keys
-                                doesn't have domain checker.
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>X003</td>
-                            <td>
-                                Unknown or unvalid user <code class="higlighted">token</code>. This error appears if you
-                                use an unknow user <code class="higlighted">token</code> or if the user <code
-                                    class="higlighted">token</code> expired.
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
         </div>
     </div>
-    <!-- Github Corner Ribbon - to remove (Ribbon created with : http://tholman.com/github-corners/ )-->
     <a href="https://github.com/pureforma4/pureforma4.github.io" class="github-corner"
         aria-label="View source on Github" title="View source on Github"><svg width="80" height="80"
             viewBox="0 0 250 250"

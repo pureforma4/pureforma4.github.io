@@ -48,7 +48,8 @@ body{
     font-family: 'Roboto', sans-serif;
 }
 strong{
-    font-weight: 500;
+    font-weight: 700;
+    color: #f4f5f8
 }
 i{
     font-style: italic;
@@ -85,7 +86,10 @@ p, .content ul, .content ol{
     margin-bottom: 1.3em;
     clear: both;
 }
-
+img {
+    padding-left: 5%;
+    padding-top: 1%;
+}
 code,
 pre{
     font-family: 'Source Code Pro', monospace;
