@@ -237,6 +237,152 @@
                     <img src="images/manual_codigo/UserRegisterAndController/getyset2.png" alt="creacion_panel_inicio_sesion">
                 </div>
             </div>
+
+            <div class="overflow-hidden content-section" id="controlador_regis_user">
+                <h1>Controlador User Register</h1>
+                <p>
+                    Controlador User Register es el controlador de la clase que hemos visto anteriormente donde se registran los usuarios, se llama Controller_RegisterWindow.java y es donde se encuentra toda la lógica y los insert a la base de datos del registro del usuario.
+                </p>
+                <ul>
+                    <li>Registro de usuarios.</li>
+                    <li>Inicio de sesión de usuarios.</li>
+                    <li>Acceder con distintos tipos de ROL al aplicativo (Admin o User).</li>
+                    <li>Listar artículos de ropa.</li>
+                    <li>Añadir productos al carrito.</li>
+                    <li>Emular compras de los productos del carrito.</li>
+                </ul>
+            </div>
+            <!-- Sección 8: Controlador de la Ventana de Registro -->
+            <div class="overflow-hidden content-section" id="controlador_registro">
+                <h1>Controlador de la Ventana de Registro</h1>
+                <p>
+                    Este bloque de código pertenece al controlador (Controller_RegisterWindow) asociado a la ventana de registro (RegisterWindow_PureForma).
+                </p>
+                
+                <!-- Atributos del Controlador -->
+                <h2>Atributos del Controlador</h2>
+                <ul>
+                    <li><code>window</code>: Referencia a la instancia de la ventana de registro.</li>
+                    <li><code>userDAO</code>: Instancia de la clase <code>UserDAO</code> para realizar operaciones de acceso a datos.</li>
+                    <li><code>user</code>: Instancia de la clase <code>User</code> que representa al usuario en proceso de registro.</li>
+                    <li><code>rol</code>: Cadena que indica el rol por defecto ("user").</li>
+                </ul>
+                
+                <!-- Constructor del Controlador -->
+                <h2>Constructor del Controlador</h2>
+                <p>
+                    El constructor del controlador toma una instancia de la ventana de registro como parámetro y realiza la inicialización de los atributos.
+                </p>
+
+                <!-- Método actionPerformed -->
+                <h2>Método <code>actionPerformed</code></h2>
+                <p>
+                    Este método es llamado cuando se produce una acción, principalmente cuando se hace clic en botones. 
+                    Realiza operaciones específicas según el botón clicado. En este caso, se verifica si el botón es el de registro (<code>btnRegister</code>).
+                </p>
+                <ul>
+                    <li>Si es el botón de registro, se validan los campos de entrada y se procede al registro del usuario en la base de datos.</li>
+                    <li>Si es el botón de retroceso (<code>btnBack</code>), se vuelve a la ventana de inicio.</li>
+                </ul>
+
+                <!-- Validación de Campos y Registro -->
+                <h2>Validación de Campos y Registro</h2>
+                <p>
+                    Se valida que los campos de entrada no estén vacíos. En caso de éxito, se extraen los datos de los campos de texto y se realiza el registro del usuario.
+                </p>
+
+                <!-- Validación de Email y Número de Teléfono -->
+                <h2>Validación de Email y Número de Teléfono</h2>
+                <p>
+                    Se realiza la validación del formato del correo electrónico y del número de teléfono mediante métodos específicos. 
+                    En caso de fallo, se muestra un mensaje de error y se limpia el campo correspondiente.
+                </p>
+
+                <!-- Mostrar Información del Usuario Registrado en la Consola -->
+                <h2>Mostrar Información del Usuario Registrado en la Consola</h2>
+                <p>
+                    Se imprime en la consola la información del usuario registrado mediante <code>System.out.println</code>.
+                </p>
+
+                <!-- Crear Ventana de Inicio si se Clicó el Botón de Retroceso -->
+                <h2>Crear Ventana de Inicio si se Clicó el Botón de Retroceso</h2>
+                <p>
+                    Si el botón clicado es el de retroceso (<code>btnBack</code>), se crea una nueva instancia de la ventana de inicio y se muestra.
+                </p>
+            </div>
+            <div class="centered-image">
+                <img src="images/manual_codigo/UserRegisterAndController/controlador_registro.png" alt="creacion_panel_inicio_sesion">
+            </div>
+            <!-- Sección 9: Métodos de Validación en el Controlador -->
+            <div class="overflow-hidden content-section" id="metodos_validacion">
+                <h1>Métodos de Validación en el Controlador</h1>
+                
+                <!-- Método validateNumber -->
+                <h2>Método <code>validateNumber</code></h2>
+                <p>
+                    Este método se encarga de validar campos que solo deben contener números. Se verifica si el contenido del campo es numérico utilizando una expresión regular.
+                </p>
+                <ul>
+                    <li><code>textField</code>: Campo de texto a validar.</li>
+                    <li><code>fieldName</code>: Nombre del campo para mensajes de error.</li>
+                    <li><code>setter</code>: Consumer que acepta un valor y realiza una acción.</li>
+                </ul>
+
+                <!-- Método isNumeric -->
+                <h2>Método <code>isNumeric</code></h2>
+                <p>
+                    Este método auxiliar verifica si una cadena es numérica utilizando una expresión regular. Retorna <code>true</code> si la cadena contiene solo dígitos.
+                </p>
+
+                <!-- Método validateEmail -->
+                <h2>Método <code>validateEmail</code></h2>
+                <p>
+                    Este método se encarga de validar campos de email. Utiliza una expresión regular para verificar el formato del email.
+                </p>
+                <ul>
+                    <li><code>textField</code>: Campo de texto a validar.</li>
+                    <li><code>fieldName</code>: Nombre del campo para mensajes de error.</li>
+                    <li><code>setter</code>: Consumer que acepta un valor y realiza una acción.</li>
+                </ul>
+
+                <!-- Método isValidEmail -->
+                <h2>Método <code>isValidEmail</code></h2>
+                <p>
+                    Este método auxiliar verifica si una cadena tiene un formato de email válido mediante una expresión regular.
+                </p>
+
+                <!-- Método validateFields -->
+                <h2>Método <code>validateFields</code></h2>
+                <p>
+                    Este método verifica que todos los campos necesarios no estén vacíos o iguales al hint. Se utiliza para validar antes de realizar el registro del usuario.
+                </p>
+
+                <!-- Método isEmpty -->
+                <h2>Método <code>isEmpty</code></h2>
+                <p>
+                    Este método verifica si un campo de texto está vacío o igual al hint. Se utiliza para cada campo individualmente.
+                </p>
+                <ul>
+                    <li><code>textField</code>: Campo de texto a validar.</li>
+                    <li><code>fieldName</code>: Nombre del campo para mensajes de error.</li>
+                    <li><code>hint</code>: Texto de pista para comparación.</li>
+                </ul>
+
+                <!-- Método isEmptyPassword -->
+                <h2>Método <code>isEmptyPassword</code></h2>
+                <p>
+                    Este método verifica si un campo de contraseña está vacío o igual al hint. Se utiliza específicamente para el campo de contraseña.
+                </p>
+                <ul>
+                    <li><code>passwordField</code>: Campo de contraseña a validar.</li>
+                    <li><code>fieldName</code>: Nombre del campo para mensajes de error.</li>
+                    <li><code>hint</code>: Texto de pista para comparación.</li>
+                </ul>
+            </div>
+            <div class="centered-image">
+                <img src="images/manual_codigo/UserRegisterAndController/metodos_controller.png" alt="creacion_panel_inicio_sesion">
+                <img src="images/manual_codigo/UserRegisterAndController/metodos_controller2.png" alt="creacion_panel_inicio_sesion">
+            </div>
         </div>
     </div>
     <!-- Github Corner Ribbon - to remove (Ribbon created with : http://tholman.com/github-corners/ )-->
