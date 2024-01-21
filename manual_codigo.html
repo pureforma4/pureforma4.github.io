@@ -57,8 +57,11 @@
                 <div class="info"><b>Last Updated:</b> 21 Enero, 2024</div>
             </div>
             <ul>
-                <li class="scroll-to-link active" data-target="login">
+                <li class="scroll-to-link active" data-target="ventana_login">
                     <a>Ventana Login</a>
+                </li>
+                <li class="scroll-to-link" data-target="controlador_login">
+                    <a>Controlador Login</a>
                 </li>
                 <li class="scroll-to-link" data-target="registro_usuarios">
                     <a>Registro de usuarios</a>
@@ -73,11 +76,12 @@
     <div class="content-page">
         <div class="content">
 
-            <div class="overflow-hidden content-section" id="login">
+            <div class="overflow-hidden content-section" id="ventana_login">
                 <h2>Ventana Login</h2>
 
                 <p>
-                    La clase Java llamada <code>LoginWindow_PureForma</code> representa la ventana de inicio de sesión
+                    La clase Java llamada <strong>LoginWindow_PureForma</strong> representa la ventana de inicio de
+                    sesión
                     de
                     la aplicación PureForma. A continuación, se describen sus principales funciones y características.
                 </p>
@@ -99,6 +103,246 @@
                     efectivo.
                 </p>
             </div>
+
+            <div class="overflow-hidden content-section" id="login_class">
+                <h3>
+                    1. Creación de la clase LoginWindow_PureForma
+                </h3>
+
+                <p>
+                    En el siguiente código Java, se presenta la clase <strong>LoginWindow_PureForma</strong>, la cual
+                    hereda de la clase <code>JFrame</code> ubicada en el paquete <code>javax.swing</code>.
+                    El inicio del código se dedica a la definición de variables que serán utilizadas en la creación de
+                    la interfaz gráfica. En el cuál podemos encontrar las siguientes variables:
+                </p>
+
+                <ul>
+
+                    <li>
+                        <strong>private JPanel contentPane:</strong>
+                        Se declara un campo llamado <code>contentPane</code> que representa el panel principal de la
+                        ventana.
+                    </li>
+
+                    <li>
+                        <strong>private boolean showingHint = true:</strong>
+                        Se declara una variable booleana llamada <code>showingHint</code> con el valor inicial
+                        <code>true</code>. Esto controlae si el mensaje de sugerencia está siendo mostrado en el
+                        campo de la contraseña.
+                    </li>
+
+                    <li>
+                        <strong>private JERoundPasswordField textField_Password:</strong>
+                        Se declara un campo llamado <code>textField_Password</code>, que es un componente
+                        gráfico para la entrada de contraseña.
+                    </li>
+
+                    <li>
+                        <strong>private JERoundTextField textField_Username:</strong>
+                        Similar al campo de contraseña, se declara un campo llamado <code>textField_Username</code>, que
+                        es un componente gráfico para la entrada de nombre de usuario.
+                    </li>
+
+                    <li>
+                        <strong>private JPanel panel_Right:</strong>
+                        Se declara un campo llamado <code>panel_Right</code>, que es un panel de Login dentro
+                        de la ventana de inicio de sesión.
+                    </li>
+
+                    <li>
+                        <strong>private Button btnSignIn, btnBack:</strong>
+                        Se declaran dos campos de botón (<code>btnSignIn</code> y <code>btnBack</code>),
+                        utilizados para realizar las acciones de inicio de sesión y retroceso, respectivamente.
+                    </li>
+
+                    <li>
+                        <strong>private Controller_LoginWindow controller:</strong>
+                        Se declara un campo llamado <code>controller</code>, que es una instancia de la clase
+                        <code>Controller_LoginWindow</code>. Este controlador es el responsable de manejar eventos
+                        y lógica relacionada con la ventana de inicio de sesión.
+                    </li>
+
+                </ul>
+
+                <img src="images/manual_codigo/ventana_login_clase.png" alt="ventana de bienvenida">
+
+                <h3>
+                    1.1 Constructor LoginWindow_PureForma
+                </h3>
+                <p>
+                    El constructor de la clase <code>LoginWindow_PureForma</code> realiza las siguientes acciones:
+                </p>
+
+                <ul>
+                    <li>
+                        <strong>Constructor de la clase LoginWindow_PureForma:</strong>
+                        <ul>
+                            <li>Se instancia un objeto de la clase Controller_LoginWindow y se asigna a la variable
+                                'controller'.</li>
+                            <li>Se establece la imagen del ícono de la ventana con la ruta
+                                "/iescarrillo/bol8grupo1/assets/user_icon.png".</li>
+                            <li>Se establece el título de la ventana como "Login PureForma".</li>
+                            <li>Se configuran las propiedades de la ventana, como el tamaño, el diseño nulo, y que no
+                                sea redimensionable.</li>
+                            <li>Se crea un panel principal (contentPane) y se establece como contenido de la ventana.
+                            </li>
+                            <li>Se crea una barra de título personalizada (SimpleTitleBar) y se añade al contentPane.
+                            </li>
+                            <li>Se crea un panel derecho (panel_Right) con fondo oscuro y se añade al contentPane.</li>
+                            <li>Se llama al método 'createPanelSignIn' para crear el panel de inicio de sesión dentro
+                                del panel derecho.</li>
+                            <li>Se crea una etiqueta de fondo (lblBackground) con una imagen de fondo y se añade al
+                                contentPane.</li>
+                            <li>Se llama al método 'handleFocusLost' usado para los hint.</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <img src="images/manual_codigo/ventana_login_constructor.png" alt="ventana de bienvenida">
+
+                <h3>1.2 Creación del Panel de Inicio de Sesión</h3>
+
+                <p>
+                    En esta sección, se presenta la implementación del método <code>createPanelSignIn</code>, el cual
+                    tiene la
+                    responsabilidad de generar un panel destinado al inicio de sesión en la interfaz gráfica de usuario.
+                </p>
+
+                <ul>
+                    <li>
+                        <strong>Acciones Realizadas por el Código:</strong>
+                        <ul>
+                            <li>Se crea un nuevo panel (<code>panel_SignIn</code>) y se configuran sus propiedades, como
+                                opacidad, fondo y
+                                posición en el contenedor principal.</li>
+                            <li>Se añade un icono de logo y un texto "Sign in" al panel de inicio de sesión.</li>
+                            <li>Se configuran y añaden campos de texto para el nombre de usuario y la contraseña al
+                                panel, con funciones
+                                adicionales para manejar el texto predeterminado y los eventos de enfoque.</li>
+                            <li>Se crea y configura un botón "Sign In" y un botón "Back", los cuales se incorporan al
+                                panel de inicio de
+                                sesión.</li>
+                            <li>Se define un ActionListener para el botón "Sign In" que invoca un método en un
+                                controlador
+                                (<code>controller.actionPerformed(e)</code>).</li>
+                            <li>Se define otro ActionListener para el botón "Back" que también invoca el mismo método
+                                del controlador.</li>
+                        </ul>
+                    </li>
+                </ul>
+
+
+                <img src="images/manual_codigo/ventana_login_call_createPanel.png" alt="ventana de bienvenida">
+
+                <img src="images/manual_codigo/ventana_login_createPanel_1.png" alt="ventana de bienvenida">
+
+                <img src="images/manual_codigo/ventana_login_createPanel_2.png" alt="ventana de bienvenida">
+
+                <h3>1.3 Método handleFocusLost y handleFocusGained</h3>
+
+                <p>
+                    Este código proporciona dos métodos (<code>handleFocusGained</code> y <code>handleFocusLost</code>)
+                    que gestionan eventos de enfoque en un campo de contraseña (<code>textField_Password</code>). Aquí
+                    está un resumen de lo que hacen:
+                </p>
+
+                <h4>handleFocusGained Método:</h4>
+                <ul>
+                    <li>Este método se ejecuta cuando el campo de contraseña gana el foco.</li>
+                    <li>Si la variable <code>showingHint</code> es verdadera, significa que actualmente se está
+                        mostrando un mensaje de sugerencia en el campo de contraseña.</li>
+                    <li>En ese caso, el método:
+                        <ul>
+                            <li>Configura el carácter de eco del campo de contraseña para que sea visible
+                                (<code>textField_Password.setEchoChar((char) 0x2022)</code>).</li>
+                            <li>Limpia el texto del campo de contraseña.</li>
+                            <li>Establece la variable <code>showingHint</code> en falso.</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <h4>handleFocusLost Método:</h4>
+                <ul>
+                    <li>Este método se ejecuta cuando el campo de contraseña pierde el foco.</li>
+                    <li>Si el campo de contraseña está vacío (su longitud es igual a cero), significa que el usuario no
+                        ha ingresado ninguna contraseña.</li>
+                    <li>En ese caso, el método:
+                        <ul>
+                            <li>Configura el carácter de eco del campo de contraseña para que no sea visible
+                                (<code>textField_Password.setEchoChar((char) 0)</code>).</li>
+                            <li>Establece el texto del campo de contraseña como "Enter your password".</li>
+                            <li>Establece la variable <code>showingHint</code> en verdadero.</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <img src="images/manual_codigo/ventana_login_metodosHint.png" alt="ventana de bienvenida">
+
+                <h3>1.3 Métodos de Obtención de Elementos</h3>
+
+                <p>
+                    Estos métodos proporcionan la capacidad de obtener información relevante sobre elementos específicos
+                    de la interfaz de usuario en la ventana de inicio de sesión.
+                </p>
+
+                <h4>getbtnSignIn Método:</h4>
+                <p>
+                    Este método devuelve el botón de inicio de sesión.
+                </p>
+
+                <h4>getbtnBack Método:</h4>
+                <p>
+                    Este método devuelve el botón de regreso.
+                </p>
+
+                <h4>getUsername Método:</h4>
+                <p>
+                    Este método devuelve el nombre de usuario ingresado en el campo correspondiente.
+                </p>
+
+                <h4>getPassword Método:</h4>
+                <p>
+                    Este método devuelve la contraseña ingresada en el campo correspondiente.
+                </p>
+
+                <img src="images/manual_codigo/ventana_login_gettersSetters.png" alt="ventana de bienvenida">
+
+            </div>
+        </div>
+    </div>
+
+    <div class="content-page">
+        <div class="content">
+
+            <div class="overflow-hidden content-section" id="controlador_login">
+                <h2>Controlador Login</h2>
+            </div>
+
+            <p>
+                La clase <strong>Controller_LoginWindow</strong> actúa como el puente entre la interfaz gráfica y la
+                lógica de la aplicación, facilitando la gestión del proceso de inicio de sesión. A continuación, se describen sus principales funciones y características.
+            </p>
+
+            <ul>
+                <li><strong>Referencia a la ventana de inicio de sesión:</strong> El controlador mantiene una referencia a la ventana de inicio de sesión (<code>LoginWindow_PureForma</code>).</li>
+                <li><strong>Acceso a la base de datos de usuarios:</strong> Utiliza un objeto de la clase <code>UserDAO</code> para acceder a la base de datos de usuarios.</li>
+                <li><strong>Constructor:</strong> El constructor recibe la ventana de inicio de sesión como parámetro y establece la referencia correspondiente.</li>
+                <li><strong>Método actionPerformed:</strong> Este método se ejecuta en respuesta a eventos de interfaz de usuario. Realiza acciones específicas dependiendo del botón clicado.</li>
+                <li><strong>Acciones para el botón de inicio de sesión:</strong>
+                    <ul>
+                        <li>Verifica las credenciales utilizando el objeto <code>UserDAO</code>.</li>
+                        <li>Si las credenciales son correctas, crea una instancia de <code>MainWindow_PureForma</code>, la hace visible y cierra la ventana de inicio de sesión.</li>
+                        <li>Si las credenciales son incorrectas, muestra una ventana de diálogo de contraseña incorrecta y registra un mensaje en la consola.</li>
+                    </ul>
+                </li>
+                <li><strong>Acciones para el botón de regreso:</strong>
+                    <ul>
+                        <li>Crea una instancia de <code>StartWindow_PureForma</code>, la hace visible y cierra la ventana de inicio de sesión.</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <img src="images/manual_codigo/ventana_login_controlador.png" alt="ventana de bienvenida">
 
         </div>
     </div>
