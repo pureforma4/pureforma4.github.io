@@ -72,8 +72,8 @@
                 <li class="scroll-to-link" data-target="registro_usuarios">
                     <a>Registro de usuarios</a>
                 </li>
-                <li class="scroll-to-link" data-target="content-errors">
-                    <a>Errors</a>
+                <li class="scroll-to-link" data-target="controlador_regis_user">
+                    <a>Controlador del Registro de Usuarios</a>
                 </li>
             </ul>
         </div>
@@ -537,7 +537,298 @@
             </ul>
 
             <img src="images/manual_codigo/ventana_login_controlador.png" alt="ventana de bienvenida">
+            
+            <div class="overflow-hidden content-section" id="registro_usuarios">
+                <h1>Registro de Usuarios</h1>
+                <p>
+                    Registro de Usuarios hace énfasis a la clase RegisterWindow_PureForma.java, será la clase con la interfaz del registro de usuario, si este no está registrado pues irá a esta clase donde tendrá que rellenar unos campos obligatoriamente.
+                    Veremos las siguientes secciones:
+                </p>
+                <ul>
+                    <li>Declaraciones e inicializaciones.</li>
+                    <li>Creación panel de inicio de sesión.</li>
+                    <li>Creación del Panel Centrado.</li>
+                    <li>Creación de Componentes Dentro del Panel Centrado.</li>
+                    <li>Métodos Adicionales para la Interfaz Gráfica</li>
+                    <li>Métodos Getter y Setter</li>
+                </ul>
+            </div>
 
+            <!-- Sección 1: Declaraciones e Inicializaciones -->
+            <div class="overflow-hidden content-section" id="declaraciones_inicializaciones">
+                <h1>Declaraciones e Inicializaciones</h1>
+                <p>
+                    Se inicia la declaración e inicialización de la clase RegisterWindow_PureForma que extiende de JFrame.
+                    Se declaran atributos para los componentes de la interfaz gráfica, como campos de texto, botones y el controlador.
+                    Se define el constructor de la clase que realiza la inicialización de la interfaz gráfica y el controlador.
+                </p>
+                <ul>
+                    <li>Extiende de JFrame.</li>
+                    <li>Declaración de atributos para componentes de la interfaz gráfica.</li>
+                    <li>Definición del constructor que inicializa la interfaz y el controlador.</li>
+                </ul>
+                <div class="centered-image">
+                    <img src="images/manual_codigo/UserRegisterAndController/declaraciones.png" alt="declaraciones_inicializaciones">
+                </div>
+            </div>
+            <!-- Sección 2: Creación del Panel Principal de Inicio de Sesión -->
+            <div class="overflow-hidden content-section" id="creacion_panel_inicio_sesion">
+                <h1>Creación del Panel Principal de Inicio de Sesión</h1>
+                <p>
+                    Se define un método createLoginPanel encargado de crear el panel principal de inicio de sesión.
+                    Se crea un nuevo panel (panel_Login) y se le establecen propiedades como opacidad y color.
+                    Se llama al método createCenteredPanel para crear un panel centrado dentro del panel principal.
+                    Se agrega una imagen de fondo al JFrame.
+                    Se llama al método handleFocusLost para manejar eventos de enfoque en los campos de texto.
+                </p>
+                <ul>
+                    <li>Definición del método createLoginPanel.</li>
+                    <li>Creación del panel principal (panel_Login) con propiedades específicas.</li>
+                    <li>Llamada al método createCenteredPanel para un panel centrado.</li>
+                    <li>Agregado de imagen de fondo al JFrame.</li>
+                    <li>Llamada al método handleFocusLost para manejar eventos de enfoque.</li>
+                </ul>
+
+                <div class="centered-image">
+                    <img src="images/manual_codigo/UserRegisterAndController/panel_principal.png" alt="creacion_panel_inicio_sesion">
+                </div>
+            </div>
+            <!-- Sección 3: Creación del Panel Centrado -->
+            <div class="overflow-hidden content-section" id="creacion_panel_central">
+                <h1>Creación del Panel Centrado</h1>
+                <p>
+                    Se define un método createCenteredPanel encargado de crear un panel centrado dentro de un panel principal.
+                    Se crea un nuevo panel (panel_Border) y se le establecen propiedades como opacidad y color.
+                    Se llama al método createComponents para crear componentes dentro del panel centrado.
+                </p>
+                <ul>
+                    <li>Definición del método createCenteredPanel.</li>
+                    <li>Creación del panel centrado (panel_Border) con propiedades específicas.</li>
+                    <li>Llamada al método createComponents para la creación de componentes dentro del panel centrado.</li>
+                </ul>
+                
+                <div class="centered-image">
+                    <img src="images/manual_codigo/UserRegisterAndController/panel_centrado.png" alt="creacion_panel_central">
+                </div>
+            </div>
+            <!-- Sección 4: Creación de Componentes Dentro del Panel Centrado -->
+            <div class="overflow-hidden content-section" id="creacion_componentes">
+                <h1>Creación de Componentes Dentro del Panel Centrado</h1>
+                <p>
+                    Se define un método createComponents encargado de crear varios componentes dentro del panel centrado.
+                    Se crea una etiqueta para el logo.
+                    Se crean campos de texto para el nombre de usuario y la contraseña, y se agregan iconos correspondientes.
+                    Se crea un escucha de enfoque para el campo de contraseña.
+                    Se crean campos de texto adicionales para email, teléfono, nombre, apellido y dirección, y se agregan iconos correspondientes.
+                    Se crean botones para registrar y retroceder, con sus respectivos manejadores de eventos.
+                </p>
+                <ul>
+                    <li>Definición del método createComponents.</li>
+                    <li>Creación de etiqueta para el logo.</li>
+                    <li>Creación de campos de texto para usuario y contraseña con iconos correspondientes.</li>
+                    <li>Creación de escucha de enfoque para el campo de contraseña.</li>
+                    <li>Creación de campos de texto adicionales para email, teléfono, nombre, apellido y dirección con iconos.</li>
+                    <li>Creación de botones para registrar y retroceder con manejadores de eventos.</li>
+                </ul>
+                
+                <div class="centered-image">
+                    <img src="images/manual_codigo/UserRegisterAndController/componentes.png" alt="creacion_componentes">
+                    <img src="images/manual_codigo/UserRegisterAndController/componentes2.png" alt="creacion_componentes2">
+                    <img src="images/manual_codigo/UserRegisterAndController/componentes3.png" alt="creacion_componentes3">
+                </div>
+            </div>
+            <!-- Sección 5: Métodos para la Creación y Manejo de Campos de Texto -->
+            <div class="overflow-hidden content-section" id="metodos_campos_texto">
+                <h1>Métodos para la Creación y Manejo de Campos de Texto</h1>
+                <p>
+                    Estos métodos se encargan de la creación y manejo de los campos de texto en la interfaz gráfica.
+                </p>
+                
+                <!-- Método createTextField -->
+                <h2>createTextField</h2>
+                <p>
+                    Este método crea un campo de texto redondeado con texto inicial, ubicación y dimensiones específicas.
+                    <br>
+                    Al obtener el enfoque, si el texto es igual al texto inicial, se limpia el campo. Si se pierde el enfoque y el campo está vacío, se restaura el texto inicial.
+                </p>
+                <!-- Puedes agregar detalles adicionales o fragmentos de código relevantes aquí -->
+
+                <!-- Método createPasswordField -->
+                <h2>createPasswordField</h2>
+                <p>
+                    Este método crea un campo de contraseña redondeado con ubicación y dimensiones específicas.
+                </p>
+                <!-- Puedes agregar detalles adicionales o fragmentos de código relevantes aquí -->
+
+                <!-- Método handleFocusGained y handleFocusLost -->
+                <h2>handleFocusGained y handleFocusLost</h2>
+                <p>
+                    Estos métodos manejan eventos de enfoque para el campo de contraseña. 
+                    <br>
+                    <code>handleFocusGained</code> oculta el texto y muestra el carácter de contraseña cuando se obtiene el enfoque.
+                    <br>
+                    <code>handleFocusLost</code> restaura el texto inicial si el campo de contraseña está vacío al perder el enfoque.
+                </p>
+                <div class="centered-image">
+                    <img src="images/manual_codigo/UserRegisterAndController/metodos_adicionales.png" alt="metodos_campos_texto">
+                </div>
+            </div>
+            <!-- Sección 7: Métodos Getter y Setter -->
+            <div class="overflow-hidden content-section" id="metodos_getter_setter">
+                <h1>Métodos Getter y Setter</h1>
+                <p>
+                    Estos métodos permiten el acceso y la modificación de los componentes de la interfaz gráfica desde otras clases, además lo puedo utilizar en funciones o métodos conn facilidad.
+                </p>
+                <div class="centered-image">
+                    <img src="images/manual_codigo/UserRegisterAndController/getyset.png" alt="metodos_getter_setter">
+                    <img src="images/manual_codigo/UserRegisterAndController/getyset2.png" alt="metodos_getter_setter2">
+                </div>
+            </div>
+
+            <div class="overflow-hidden content-section" id="controlador_regis_user">
+                <h1>Controlador User Register</h1>
+                <p>
+                    Controlador User Register es el controlador de la clase que hemos visto anteriormente donde se registran los usuarios, se llama Controller_RegisterWindow.java y es donde se encuentra toda la lógica y los insert a la base de datos del registro del usuario.
+                    Veremos:
+                </p>
+                <ul>
+                    <li>Atributos del Controlador.</li>
+                    <li>Constructor del Controlador.</li>
+                    <li>Métodos de validación.</li>
+                    <li>Jdialog.</li>
+                </ul>
+            </div>
+            <!-- Sección 8: Controlador de la Ventana de Registro -->
+            <div class="overflow-hidden content-section" id="controlador_registro">
+                <h1>Controlador de la Ventana de Registro</h1>
+                <p>
+                    Este bloque de código pertenece al controlador (Controller_RegisterWindow) asociado a la ventana de registro (RegisterWindow_PureForma).
+                </p>
+                
+                <!-- Atributos del Controlador -->
+                <h2>Atributos del Controlador</h2>
+                <ul>
+                    <li><code>window</code>: Referencia a la instancia de la ventana de registro.</li>
+                    <li><code>userDAO</code>: Instancia de la clase <code>UserDAO</code> para realizar operaciones de acceso a datos.</li>
+                    <li><code>user</code>: Instancia de la clase <code>User</code> que representa al usuario en proceso de registro.</li>
+                    <li><code>rol</code>: Cadena que indica el rol por defecto ("user").</li>
+                </ul>
+                
+                <!-- Constructor del Controlador -->
+                <h2>Constructor del Controlador</h2>
+                <p>
+                    El constructor del controlador toma una instancia de la ventana de registro como parámetro y realiza la inicialización de los atributos.
+                </p>
+
+                <!-- Método actionPerformed -->
+                <h2>Método <code>actionPerformed</code></h2>
+                <p>
+                    Este método es llamado cuando se produce una acción, principalmente cuando se hace clic en botones. 
+                    Realiza operaciones específicas según el botón clicado. En este caso, se verifica si el botón es el de registro (<code>btnRegister</code>).
+                </p>
+                <ul>
+                    <li>Si es el botón de registro, se validan los campos de entrada y se procede al registro del usuario en la base de datos.</li>
+                    <li>Si es el botón de retroceso (<code>btnBack</code>), se vuelve a la ventana de inicio.</li>
+                </ul>
+
+                <!-- Validación de Campos y Registro -->
+                <h2>Validación de Campos y Registro</h2>
+                <p>
+                    Se valida que los campos de entrada no estén vacíos. En caso de éxito, se extraen los datos de los campos de texto y se realiza el registro del usuario.
+                </p>
+
+                <!-- Validación de Email y Número de Teléfono -->
+                <h2>Validación de Email y Número de Teléfono</h2>
+                <p>
+                    Se realiza la validación del formato del correo electrónico y del número de teléfono mediante métodos específicos. 
+                    En caso de fallo, se muestra un mensaje de error y se limpia el campo correspondiente.
+                </p>
+
+                <!-- Mostrar Información del Usuario Registrado en la Consola -->
+                <h2>Mostrar Información del Usuario Registrado en la Consola</h2>
+                <p>
+                    Se imprime en la consola la información del usuario registrado mediante <code>System.out.println</code>.
+                </p>
+
+                <!-- Crear Ventana de Inicio si se Clicó el Botón de Retroceso -->
+                <h2>Crear Ventana de Inicio si se Clicó el Botón de Retroceso</h2>
+                <p>
+                    Si el botón clicado es el de retroceso (<code>btnBack</code>), se crea una nueva instancia de la ventana de inicio y se muestra.
+                </p>
+            </div>
+            <div class="centered-image">
+                <img src="images/manual_codigo/UserRegisterAndController/controlador_registro.png" alt="controlador_registro">
+            </div>
+            <!-- Sección 9: Métodos de Validación en el Controlador -->
+            <div class="overflow-hidden content-section" id="metodos_validacion">
+                <h1>Métodos de Validación en el Controlador</h1>
+                
+                <!-- Método validateNumber -->
+                <h2>Método <code>validateNumber</code></h2>
+                <p>
+                    Este método se encarga de validar campos que solo deben contener números. Se verifica si el contenido del campo es numérico utilizando una expresión regular.
+                </p>
+                <ul>
+                    <li><code>textField</code>: Campo de texto a validar.</li>
+                    <li><code>fieldName</code>: Nombre del campo para mensajes de error.</li>
+                    <li><code>setter</code>: Consumer que acepta un valor y realiza una acción.</li>
+                </ul>
+
+                <!-- Método isNumeric -->
+                <h2>Método <code>isNumeric</code></h2>
+                <p>
+                    Este método auxiliar verifica si una cadena es numérica utilizando una expresión regular. Retorna <code>true</code> si la cadena contiene solo dígitos.
+                </p>
+
+                <!-- Método validateEmail -->
+                <h2>Método <code>validateEmail</code></h2>
+                <p>
+                    Este método se encarga de validar campos de email. Utiliza una expresión regular para verificar el formato del email.
+                </p>
+                <ul>
+                    <li><code>textField</code>: Campo de texto a validar.</li>
+                    <li><code>fieldName</code>: Nombre del campo para mensajes de error.</li>
+                    <li><code>setter</code>: Consumer que acepta un valor y realiza una acción.</li>
+                </ul>
+
+                <!-- Método isValidEmail -->
+                <h2>Método <code>isValidEmail</code></h2>
+                <p>
+                    Este método auxiliar verifica si una cadena tiene un formato de email válido mediante una expresión regular.
+                </p>
+
+                <!-- Método validateFields -->
+                <h2>Método <code>validateFields</code></h2>
+                <p>
+                    Este método verifica que todos los campos necesarios no estén vacíos o iguales al hint. Se utiliza para validar antes de realizar el registro del usuario.
+                </p>
+
+                <!-- Método isEmpty -->
+                <h2>Método <code>isEmpty</code></h2>
+                <p>
+                    Este método verifica si un campo de texto está vacío o igual al hint. Se utiliza para cada campo individualmente.
+                </p>
+                <ul>
+                    <li><code>textField</code>: Campo de texto a validar.</li>
+                    <li><code>fieldName</code>: Nombre del campo para mensajes de error.</li>
+                    <li><code>hint</code>: Texto de pista para comparación.</li>
+                </ul>
+
+                <!-- Método isEmptyPassword -->
+                <h2>Método <code>isEmptyPassword</code></h2>
+                <p>
+                    Este método verifica si un campo de contraseña está vacío o igual al hint. Se utiliza específicamente para el campo de contraseña.
+                </p>
+                <ul>
+                    <li><code>passwordField</code>: Campo de contraseña a validar.</li>
+                    <li><code>fieldName</code>: Nombre del campo para mensajes de error.</li>
+                    <li><code>hint</code>: Texto de pista para comparación.</li>
+                </ul>
+            </div>
+            <div class="centered-image">
+                <img src="images/manual_codigo/UserRegisterAndController/metodos_controller.png" alt="metodos_validacion">
+                <img src="images/manual_codigo/UserRegisterAndController/metodos_controller2.png" alt="metodos_validacion2">
+            </div>
         </div>
     </div>
 
