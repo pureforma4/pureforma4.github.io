@@ -57,7 +57,13 @@
                 <div class="info"><b>Last Updated:</b> 21 Enero, 2024</div>
             </div>
             <ul>
-                <li class="scroll-to-link active" data-target="ventana_login">
+                <li class="scroll-to-link active" data-target="ventana_inicio">
+                    <a>Ventana Inicio</a>
+                </li>
+                <li class="scroll-to-link" data-target="controlador_inicio">
+                    <a>Controlador Inicio</a>
+                </li>
+                <li class="scroll-to-link" data-target="ventana_login">
                     <a>Ventana Login</a>
                 </li>
                 <li class="scroll-to-link" data-target="controlador_login">
@@ -70,6 +76,184 @@
                     <a>Errors</a>
                 </li>
             </ul>
+        </div>
+    </div>
+
+    <div class="content-page">
+        <div class="content">
+
+            <div class="overflow-hidden content-section" id="ventana_inicio">
+                <h2>Ventana Inicio</h2>
+            </div>
+
+            <p>
+                La clase Java llamada <strong>StartWindow_PureForma</strong> representa la ventana de inicio de
+                la aplicación PureForma. A continuación, se describen sus principales funciones y características.
+            </p>
+
+            <ul>
+                <li>Creación de la ventana de inicio de con elementos gráficos.</li>
+                <li>Configuración de propiedades como icono, título, tamaño y diseño de la ventana.</li>
+                <li>Creación de componentes gráficos como campos de texto, botones e imágenes.</li>
+                <li>Interacción con la clase de controlador <code>Controller_StartWindow</code> para acciones
+                    específicas.</li>
+            </ul>
+
+            <div class="overflow-hidden content-section" id="login_class">
+                <h3>
+                    1. Creación de la clase StartWindow_PureForma
+                </h3>
+
+                <p>
+                    En el siguiente código Java, se presenta la clase <strong>StartWindow_PureForma</strong>, la cual
+                    hereda de la clase <code>JFrame</code> ubicada en el paquete <code>javax.swing</code>.
+                    El inicio del código se dedica a la definición de variables que serán utilizadas en la creación de
+                    la interfaz gráfica. En el cuál podemos encontrar las siguientes variables:
+                </p>
+
+                <ul>
+
+                    <li>
+                        <strong>private JPanel contentPane:</strong>
+                        Se declara un campo llamado <code>contentPane</code>, que representa el panel principal de la
+                        ventana.
+                    </li>
+
+                    <li>
+                        <strong>private Controller_StartWindow controller:</strong>
+                        Se declara un campo llamado <code>controller</code>, que es una instancia de la clase
+                        <code>Controller_StartWindow</code>.
+                        Este controlador es responsable de manejar eventos y lógica relacionada con la ventana de
+                        inicio.
+                    </li>
+
+                    <li>
+                        <strong>private Button btnSignUp, btnSignIn:</strong>
+                        Se declaran dos campos de botón (<code>btnSignUp</code> y <code>btnSignIn</code>), que se
+                        utilizan para realizar acciones
+                        de registro e inicio de sesión, respectivamente.
+                    </li>
+
+                </ul>
+
+                <img src="images/manual_codigo/ventana_inicio_clase.png" alt="ventana de bienvenida">
+
+                <h3>
+                    1.1 Constructor StartWindow_PureForma
+                </h3>
+                <p>
+                    El constructor de la clase <code>StartWindow_PureForma</code> realiza las siguientes acciones:
+                </p>
+
+                <ul>
+                    <li>
+                        <strong>Constructor de la clase StartWindow_PureForma:</strong>
+                        <ul>
+                            <li>Se establece el título de la ventana como "PureForma".</li>
+                            <li>Se instancia un objeto de la clase <code>Controller_StartWindow</code> y se asigna a la
+                                variable 'controller'.</li>
+                            <li>Se configuran las propiedades de la ventana, como el tamaño, el diseño nulo, y que no
+                                sea redimensionable.</li>
+                            <li>Se crea un panel principal (contentPane) y se establece como contenido de la ventana.
+                            </li>
+                            <li>Se crea una barra de título personalizada (SimpleTitleBar) y se añade al contentPane.
+                            </li>
+                            <li>Se crea un panel de inicio de sesión con fondo oscuro y se añade al contentPane.</li>
+                            <li>Se crea un panel interior en el panel de inicio de sesión.</li>
+                            <li>Se añade un icono de ventana al panel interior.</li>
+                            <li>Se añade una etiqueta "Join us" al panel interior con un estilo de fuente específico.
+                            </li>
+                            <li>Se crea un botón de registro (btnSignUp) con un tooltip, posición y acción asociada.
+                            </li>
+                            <li>Se crea un botón de inicio de sesión (btnSignIn) con un tooltip, posición y acción
+                                asociada.</li>
+                            <li>Se añade una etiqueta "Or" al panel interior.</li>
+                            <li>Se añade una etiqueta de documentación al panel interior con un tooltip.</li>
+                            <li>Se añaden componentes al panel interior.</li>
+                            <li>Se añade una imagen de fondo al contentPane.</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <img src="images/manual_codigo/ventana_inicio_constructor_1.png" alt="ventana de bienvenida">
+
+                <img src="images/manual_codigo/ventana_inicio_constructor_2.png" alt="ventana de bienvenida">
+
+
+                <h3>1.3 Métodos de Obtención de Elementos</h3>
+
+                <p>
+                    Estos métodos proporcionan la capacidad de obtener información relevante sobre elementos específicos
+                    de la interfaz de usuario en la ventana de inicio de sesión.
+                </p>
+
+                <h4>getbtnSignIn Método:</h4>
+                <p>
+                    Este método devuelve el botón de inicio de sesión.
+                </p>
+
+                <h4>getbtnSignUp Método:</h4>
+                <p>
+                    Este método devuelve el botón de registro.
+                </p>
+
+                <img src="images/manual_codigo/ventana_inicio_gettersSetters.png" alt="ventana de bienvenida">
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="content-page">
+        <div class="content">
+
+            <div class="overflow-hidden content-section" id="controlador_inicio">
+                <h2>Controlador Inicio</h2>
+            </div>
+
+            <p>
+                La clase <strong>Controller_StartWindow</strong> actúa como el puente entre la interfaz gráfica y la
+                lógica de
+                la aplicación, facilitando la gestión de eventos en la ventana de inicio. A continuación, se describen
+                sus
+                principales funciones y características.
+            </p>
+
+            <ul>
+                <li>
+                    <strong>Referencia a la ventana de inicio:</strong> El controlador mantiene una referencia a la
+                    ventana
+                    de inicio (<code>StartWindow_PureForma</code>).
+                </li>
+                <li>
+                    <strong>Constructor:</strong> El constructor recibe la ventana de inicio como parámetro y establece
+                    la
+                    referencia correspondiente.
+                </li>
+                <li>
+                    <strong>Método actionPerformed:</strong> Este método se ejecuta en respuesta a eventos de interfaz
+                    de
+                    usuario. Realiza acciones específicas dependiendo del botón clicado.
+                </li>
+                <li>
+                    <strong>Acciones para el botón de inicio de sesión:</strong>
+                    <ul>
+                        <li>Abre la ventana de inicio de sesión (<code>LoginWindow_PureForma</code>) y cierra la ventana
+                            actual.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Acciones para el botón de registro:</strong>
+                    <ul>
+                        <li>Abre la ventana de registro (<code>RegisterWindow_PureForma</code>) y cierra la ventana
+                            actual.</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <img src="images/manual_codigo/ventana_inicio_controlador.png" alt="ventana de bienvenida">
+
         </div>
     </div>
 
@@ -102,6 +286,7 @@
                     usuario y contraseña, así como la manipulación de la interfaz gráfica para un inicio de sesión
                     efectivo.
                 </p>
+
             </div>
 
             <div class="overflow-hidden content-section" id="login_class">
@@ -320,24 +505,33 @@
 
             <p>
                 La clase <strong>Controller_LoginWindow</strong> actúa como el puente entre la interfaz gráfica y la
-                lógica de la aplicación, facilitando la gestión del proceso de inicio de sesión. A continuación, se describen sus principales funciones y características.
+                lógica de la aplicación, facilitando la gestión del proceso de inicio de sesión. A continuación, se
+                describen sus principales funciones y características.
             </p>
 
             <ul>
-                <li><strong>Referencia a la ventana de inicio de sesión:</strong> El controlador mantiene una referencia a la ventana de inicio de sesión (<code>LoginWindow_PureForma</code>).</li>
-                <li><strong>Acceso a la base de datos de usuarios:</strong> Utiliza un objeto de la clase <code>UserDAO</code> para acceder a la base de datos de usuarios.</li>
-                <li><strong>Constructor:</strong> El constructor recibe la ventana de inicio de sesión como parámetro y establece la referencia correspondiente.</li>
-                <li><strong>Método actionPerformed:</strong> Este método se ejecuta en respuesta a eventos de interfaz de usuario. Realiza acciones específicas dependiendo del botón clicado.</li>
+                <li><strong>Referencia a la ventana de inicio de sesión:</strong> El controlador mantiene una referencia
+                    a la ventana de inicio de sesión (<code>LoginWindow_PureForma</code>).</li>
+                <li><strong>Acceso a la base de datos de usuarios:</strong> Utiliza un objeto de la clase
+                    <code>UserDAO</code> para acceder a la base de datos de usuarios.
+                </li>
+                <li><strong>Constructor:</strong> El constructor recibe la ventana de inicio de sesión como parámetro y
+                    establece la referencia correspondiente.</li>
+                <li><strong>Método actionPerformed:</strong> Este método se ejecuta en respuesta a eventos de interfaz
+                    de usuario. Realiza acciones específicas dependiendo del botón clicado.</li>
                 <li><strong>Acciones para el botón de inicio de sesión:</strong>
                     <ul>
                         <li>Verifica las credenciales utilizando el objeto <code>UserDAO</code>.</li>
-                        <li>Si las credenciales son correctas, crea una instancia de <code>MainWindow_PureForma</code>, la hace visible y cierra la ventana de inicio de sesión.</li>
-                        <li>Si las credenciales son incorrectas, muestra una ventana de diálogo de contraseña incorrecta y registra un mensaje en la consola.</li>
+                        <li>Si las credenciales son correctas, crea una instancia de <code>MainWindow_PureForma</code>,
+                            la hace visible y cierra la ventana de inicio de sesión.</li>
+                        <li>Si las credenciales son incorrectas, muestra una ventana de diálogo de contraseña incorrecta
+                            y registra un mensaje en la consola.</li>
                     </ul>
                 </li>
                 <li><strong>Acciones para el botón de regreso:</strong>
                     <ul>
-                        <li>Crea una instancia de <code>StartWindow_PureForma</code>, la hace visible y cierra la ventana de inicio de sesión.</li>
+                        <li>Crea una instancia de <code>StartWindow_PureForma</code>, la hace visible y cierra la
+                            ventana de inicio de sesión.</li>
                     </ul>
                 </li>
             </ul>
