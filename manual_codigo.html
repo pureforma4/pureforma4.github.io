@@ -96,14 +96,15 @@
                 <h1>Registro de Usuarios</h1>
                 <p>
                     Registro de Usuarios hace énfasis a la clase RegisterWindow_PureForma.java, será la clase con la interfaz del registro de usuario, si este no está registrado pues irá a esta clase donde tendrá que rellenar unos campos obligatoriamente.
+                    Veremos las siguientes secciones:
                 </p>
                 <ul>
-                    <li>Registro de usuarios.</li>
-                    <li>Inicio de sesión de usuarios.</li>
-                    <li>Acceder con distintos tipos de ROL al aplicativo (Admin o User).</li>
-                    <li>Listar artículos de ropa.</li>
-                    <li>Añadir productos al carrito.</li>
-                    <li>Emular compras de los productos del carrito.</li>
+                    <li>Declaraciones e inicializaciones.</li>
+                    <li>Creación panel de inicio de sesión.</li>
+                    <li>Creación del Panel Centrado.</li>
+                    <li>Creación de Componentes Dentro del Panel Centrado.</li>
+                    <li>Métodos Adicionales para la Interfaz Gráfica</li>
+                    <li>Métodos Getter y Setter</li>
                 </ul>
             </div>
 
@@ -161,7 +162,7 @@
                 </ul>
                 
                 <div class="centered-image">
-                    <img src="images/manual_codigo/UserRegisterAndController/panel_centrado.png" alt="creacion_panel_inicio_sesion">
+                    <img src="images/manual_codigo/UserRegisterAndController/panel_centrado.png" alt="creacion_panel_central">
                 </div>
             </div>
             <!-- Sección 4: Creación de Componentes Dentro del Panel Centrado -->
@@ -185,9 +186,9 @@
                 </ul>
                 
                 <div class="centered-image">
-                    <img src="images/manual_codigo/UserRegisterAndController/componentes.png" alt="creacion_panel_inicio_sesion">
-                    <img src="images/manual_codigo/UserRegisterAndController/componentes2.png" alt="creacion_panel_inicio_sesion">
-                    <img src="images/manual_codigo/UserRegisterAndController/componentes3.png" alt="creacion_panel_inicio_sesion">
+                    <img src="images/manual_codigo/UserRegisterAndController/componentes.png" alt="creacion_componentes">
+                    <img src="images/manual_codigo/UserRegisterAndController/componentes2.png" alt="creacion_componentes2">
+                    <img src="images/manual_codigo/UserRegisterAndController/componentes3.png" alt="creacion_componentes3">
                 </div>
             </div>
             <!-- Sección 5: Métodos para la Creación y Manejo de Campos de Texto -->
@@ -223,7 +224,7 @@
                     <code>handleFocusLost</code> restaura el texto inicial si el campo de contraseña está vacío al perder el enfoque.
                 </p>
                 <div class="centered-image">
-                    <img src="images/manual_codigo/UserRegisterAndController/metodos_adicionales.png" alt="creacion_panel_inicio_sesion">
+                    <img src="images/manual_codigo/UserRegisterAndController/metodos_adicionales.png" alt="metodos_campos_texto">
                 </div>
             </div>
             <!-- Sección 7: Métodos Getter y Setter -->
@@ -233,8 +234,8 @@
                     Estos métodos permiten el acceso y la modificación de los componentes de la interfaz gráfica desde otras clases, además lo puedo utilizar en funciones o métodos conn facilidad.
                 </p>
                 <div class="centered-image">
-                    <img src="images/manual_codigo/UserRegisterAndController/getyset.png" alt="creacion_panel_inicio_sesion">
-                    <img src="images/manual_codigo/UserRegisterAndController/getyset2.png" alt="creacion_panel_inicio_sesion">
+                    <img src="images/manual_codigo/UserRegisterAndController/getyset.png" alt="metodos_getter_setter">
+                    <img src="images/manual_codigo/UserRegisterAndController/getyset2.png" alt="metodos_getter_setter2">
                 </div>
             </div>
 
@@ -242,14 +243,13 @@
                 <h1>Controlador User Register</h1>
                 <p>
                     Controlador User Register es el controlador de la clase que hemos visto anteriormente donde se registran los usuarios, se llama Controller_RegisterWindow.java y es donde se encuentra toda la lógica y los insert a la base de datos del registro del usuario.
+                    Veremos:
                 </p>
                 <ul>
-                    <li>Registro de usuarios.</li>
-                    <li>Inicio de sesión de usuarios.</li>
-                    <li>Acceder con distintos tipos de ROL al aplicativo (Admin o User).</li>
-                    <li>Listar artículos de ropa.</li>
-                    <li>Añadir productos al carrito.</li>
-                    <li>Emular compras de los productos del carrito.</li>
+                    <li>Atributos del Controlador.</li>
+                    <li>Constructor del Controlador.</li>
+                    <li>Métodos de validación.</li>
+                    <li>Jdialog.</li>
                 </ul>
             </div>
             <!-- Sección 8: Controlador de la Ventana de Registro -->
@@ -311,7 +311,7 @@
                 </p>
             </div>
             <div class="centered-image">
-                <img src="images/manual_codigo/UserRegisterAndController/controlador_registro.png" alt="creacion_panel_inicio_sesion">
+                <img src="images/manual_codigo/UserRegisterAndController/controlador_registro.png" alt="controlador_registro">
             </div>
             <!-- Sección 9: Métodos de Validación en el Controlador -->
             <div class="overflow-hidden content-section" id="metodos_validacion">
@@ -380,8 +380,8 @@
                 </ul>
             </div>
             <div class="centered-image">
-                <img src="images/manual_codigo/UserRegisterAndController/metodos_controller.png" alt="creacion_panel_inicio_sesion">
-                <img src="images/manual_codigo/UserRegisterAndController/metodos_controller2.png" alt="creacion_panel_inicio_sesion">
+                <img src="images/manual_codigo/UserRegisterAndController/metodos_controller.png" alt="metodos_validacion">
+                <img src="images/manual_codigo/UserRegisterAndController/metodos_controller2.png" alt="metodos_validacion2">
             </div>
         </div>
     </div>
