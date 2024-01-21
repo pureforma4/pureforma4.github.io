@@ -122,8 +122,8 @@
                     </li>
                 </ol>
 
-                <img src="images/manual_uso/register.jpg" alt="Ventana de registro">
-                
+                <img src="images/manual_codigo/interfaz_genericDAO/interfazGenericDAO.jpg" alt="interfazGenericDAO">
+
             </div>
 
             <div class="overflow-hidden content-section" id="claseUserDAO">
@@ -141,22 +141,27 @@
                         <p>Este método se utiliza para insertar un nuevo usuario en la base de datos. Verifica
                             previamente si ya existe un usuario con el mismo username, email o phone antes de realizar
                             la inserción.</p>
+                            <img src="images/manual_codigo/claseUserDAO/insertUserDAO.jpg" alt="insertUserDAO">
                     </li>
                     <li>
                         <h4><code>User getById(Integer id);</code></h4>
                         <p>Recupera un usuario de la base de datos basándose en el ID proporcionado.</p>
+                        <img src="images/manual_codigo/claseUserDAO/getByIdUserDAO.jpg" alt="getByIdUserDAO">
                     </li>
                     <li>
                         <h4><code>List<User> getAll();</code></h4>
                         <p>Retorna una lista de todos los usuarios presentes en la base de datos.</p>
+                        <img src="images/manual_codigo/claseUserDAO/getAllUserDAO.jpg" alt="getAllUserDAO">
                     </li>
                     <li>
                         <h4><code>void update(User entidad);</code></h4>
                         <p>Actualiza un usuario existente en la base de datos.</p>
+                        <img src="images/manual_codigo/claseUserDAO/updateUserDAO.jpg" alt="updateUserDAO">
                     </li>
                     <li>
                         <h4><code>void delete(Integer id);</code></h4>
                         <p>Elimina un usuario de la base de datos basándose en el ID proporcionado.</p>
+                        <img src="images/manual_codigo/claseUserDAO/deleteUserDao.jpg" alt="deleteUserDao">
                     </li>
                 </ol>
 
@@ -167,11 +172,13 @@
                         <h4><code>boolean checkCredentials(String username, String password);</code></h4>
                         <p>Verifica las credenciales de un usuario comparando el username y la contraseña proporcionados
                             con los almacenados en la base de datos.</p>
+                            <img src="images/manual_codigo/claseUserDAO/checkCredentialsUserDao.jpg" alt="checkCredentialsUserDao">
                     </li>
                     <li>
                         <h4><code>boolean userExists(String username, String email, String phone);</code></h4>
                         <p>Verifica la existencia de un usuario con el mismo username, email o phone en la base de
                             datos.</p>
+                            <img src="images/manual_codigo/claseUserDAO/userExistsUserDAO.jpg" alt="userExistsUserDAO">
                     </li>
                 </ul>
 
@@ -180,6 +187,7 @@
                 <p>La clase utiliza JDBC para interactuar con la base de datos PostgreSQL y la biblioteca
                     <code>jBCrypt</code> para el cifrado y verificación de contraseñas.
                 </p>
+                <img src="images/manual_codigo/claseUserDAO/conexionUserDAO.jpg" alt="conexionUserDAO">
             </div>
 
             <div class="overflow-hidden content-section" id="claseAdminDAO">
@@ -196,22 +204,27 @@
                     <li>
                         <h4><code>void insert(Admin entidad);</code></h4>
                         <p>Este método se utiliza para insertar un nuevo administrador en la base de datos.</p>
+                        <img src="images/manual_codigo/claseAdminDAO/insertAdminDAO.jpg" alt="insertAdminDAO">
                     </li>
                     <li>
                         <h4><code>Admin getById(Integer id);</code></h4>
                         <p>Recupera un administrador de la base de datos basándose en el ID proporcionado.</p>
+                        <img src="images/manual_codigo/claseAdminDAO/getByIdAdminDAO.jpg" alt="getByIdAdminDAO">
                     </li>
                     <li>
                         <h4><code>List<Admin> getAll();</code></h4>
                         <p>Retorna una lista de todos los administradores presentes en la base de datos.</p>
+                        <img src="images/manual_codigo/claseAdminDAO/getAllAdminDAO.jpg" alt="getAllAdminDAO">
                     </li>
                     <li>
                         <h4><code>void update(Admin entidad);</code></h4>
                         <p>Actualiza un administrador existente en la base de datos.</p>
+                        <img src="images/manual_codigo/claseAdminDAO/updateAdminDAO.jpg" alt="updateAdminDAO">
                     </li>
                     <li>
                         <h4><code>void delete(Integer id);</code></h4>
                         <p>Elimina un administrador de la base de datos basándose en el ID proporcionado.</p>
+                        <img src="images/manual_codigo/claseAdminDAO/deleteAdminDAO.jpg" alt="deleteAdminDAO">
                     </li>
                 </ol>
 
@@ -222,6 +235,7 @@
                         <h4><code>boolean checkCredentials(String username, String password);</code></h4>
                         <p>Verifica las credenciales de un usuario comparando el username y la contraseña proporcionados
                             con los almacenados en la base de datos.</p>
+                            <img src="images/manual_codigo/claseAdminDAO/checkCredentialsAdminDAO.jpg" alt="checkCredentialsAdminDAO">
                     </li>
                 </ul>
 
@@ -230,6 +244,7 @@
                 <p>La clase utiliza JDBC para interactuar con la base de datos PostgreSQL y la biblioteca
                     <code>jBCrypt</code> para el cifrado y verificación de contraseñas.
                 </p>
+                <img src="images/manual_codigo/claseAdminDAO/conexionAdminDAO.jpg" alt="conexionAdminDAO">
             </div>
 
             <div class="overflow-hidden content-section" id="claseConnection">
@@ -265,6 +280,7 @@
                         <p>Contraseña del usuario de la base de datos PostgreSQL.</p>
                     </li>
                 </ul>
+                <img src="images/manual_codigo/claseConnection/clasePostgreSQLConnection.jpg" alt="clasePostgreSQLConnection">
             </div>
         </div>
     </div>
