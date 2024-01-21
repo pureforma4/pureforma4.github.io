@@ -60,11 +60,17 @@
                 <li class="scroll-to-link active" data-target="inicio">
                     <a>Inicio</a>
                 </li>
-                <li class="scroll-to-link" data-target="registro_usuarios">
-                    <a>Registro de usuarios</a>
+                <li class="scroll-to-link" data-target="jdk">
+                    <a>JDK 20</a>
                 </li>
-                <li class="scroll-to-link" data-target="content-errors">
-                    <a>Errors</a>
+                <li class="scroll-to-link" data-target="descarga">
+                    <a>Descarga</a>
+                </li>
+                <li class="scroll-to-link" data-target="instalacion">
+                    <a>Instalación</a>
+                </li>
+                <li class="scroll-to-link" data-target="ejecucion">
+                    <a>Ejecución de la aplicación.</a>
                 </li>
             </ul>
         </div>
@@ -76,17 +82,108 @@
             <div class="overflow-hidden content-section" id="inicio">
                 <h1>Inicio</h1>
                 <p>
-                    PUREFORMA es una aplicación Java diseñada para uso de clientes de una tienda de ropa. Esta
-                    aplicación nos permitirá realizar acciones comunes de cualquier aplicación y a su vez acciones
-                    comunes de una tienda.
+                    PUREFORMA es una <strong>aplicación Java</strong> desarrollada en el <strong>JDK 20</strong>, por lo que es necesario tenerlo instalado para garantizar su correcto funcionamiento.
+                    En este manual, se proporcionará una guía detallada sobre cómo instalar el JDK necesario y cómo proceder con la ejecución de la aplicación.
+                </p>
+            </div>
+            <div class="overflow-hidden content-section" id="jdk">
+                <h1>Descarga e instalación del JDK 20.0.2.</h1>
+                <p>
+                    En este apartado describiremos detalladamente el proceso de <strong>descarga</strong> e <strong>instalación</strong> del <strong>JDK 20</strong>.
                 </p>
                 <ul>
-                    <li>Registro de usuarios.</li>
-                    <li>Inicio de sesión de usuarios.</li>
-                    <li>Acceder con distintos tipos de ROL al aplicativo (Admin o User).</li>
-                    <li>Listar artículos de ropa.</li>
-                    <li>Añadir productos al carrito.</li>
-                    <li>Emular compras de los productos del carrito.</li>
+                    <li>El primer paso es dirigirnos a la página de descargas de oracle,a la cual podemos <a href="https://www.oracle.com/java/technologies/javase/jdk20-archive-downloads.html" target="_blank">acceder desde este enlace</a> 
+                        o bien copiando y pegando esta URL en la barra de navegacion de nuestro buscador "https://www.oracle.com/java/technologies/javase/jdk20-archive-downloads.html"
+                        <p><img alt="download" title="download" src="images/manual_ejecucion/download.png" /></p>
+                    </li>
+                    <li>Una vez en la página, nos desplazamos hacia abajo y seleccionamos la versión del JDK <strong>según el sistema operativo</strong> de nuestro dispositivo. En este caso vamos a 
+                        instalar la version para <strong>Windows x64 msi</strong>.
+                        <p><img alt="jdkInstaller" title="jdkInstaller" src="images/manual_ejecucion/jdkInstaller.png" /></p>
+                    </li>
+                    <li>Una vez abierto el instalador, <strong>clicamos en "Next"</strong>.
+                        <p><img alt="installer1" title="installer1" src="images/manual_ejecucion/installer1.png" /></p>
+                    </li>
+                    <li>Seleccionamos la ubicacion en la que queremos que <strong>se almacene el JDK</strong> (recomendable no cambiar la ruta predeterminada) y continuamos.
+                        <p><img alt="installer2" title="installer2" src="images/manual_ejecucion/installer2.png" /></p>
+                        <ol>
+                            <li>Change: si deseamos cambiar la ruta donde se va a almacenar el JDK clicaremos aquí y seleccionaremos la ruta deseada.</li>
+                            <li>Next: al clicar sobre este botón avanzaremos al siguiente paso del proceso de instalación.</li>
+                        </ol>
+                    </li>
+                    <li>Nos saldrá una ventana con una barra de carga, <strong>esperamos a que termine</strong>.
+                        <p><img alt="installer3" title="installer3" src="images/manual_ejecucion/installer3.png" /></p>
+                    </li>
+                    <li>Una vez terminado el proceso de instalación, podremos <strong>acceder a la documentación</strong> o simplemente <strong>cerrar la ventana</strong>.
+                        <p><img alt="installer4" title="installer4" src="images/manual_ejecucion/installer4.png" /></p>
+                        <ol>
+                            <li>Next Steps: Al clicar sobre este botón se nos abrirá una pestaña del navegador con la documentacion del JDK 20.
+                                <p><img alt="documentation" title="documentation" src="images/manual_ejecucion/documentation.png" /></p>
+                            </li>
+                            <li>Close: cierra el asistente de instalación.</li>
+                        </ol>
+                    </li>
+                </ul>
+            </div>
+            <div class="overflow-hidden content-section" id="descarga">
+                <h1>Descarga del JDK 20.0.2.</h1>
+                <ul>
+                    <li>El primer paso es dirigirnos a la página de descargas de oracle,a la cual podemos <a href="https://www.oracle.com/java/technologies/javase/jdk20-archive-downloads.html" target="_blank">acceder desde este enlace</a> o bien copiando y pegando esta URL en la barra de navegacion de nuestro buscador "https://www.oracle.com/java/technologies/javase/jdk20-archive-downloads.html"</li>
+                    <li>Una vez en la página, nos desplazamos hacia abajo y seleccionamos la versión del JDK <strong>según el sistema operativo</strong> de nuestro dispositivo. En este caso vamos a 
+                        instalar la version para <strong>Windows x64 msi</strong>.
+                        <p><img alt="jdkInstaller" title="jdkInstaller" src="images/manual_ejecucion/jdkInstaller.png" /></p>
+                    </li>
+                </ul>
+            </div>
+            <div class="overflow-hidden content-section" id="instalacion">
+                <h1>Instalación del JDK 20.0.2.</h1>
+                <ul>
+                    <li>Una vez abierto el instalador, <strong>clicamos en "Next"</strong>.
+                        <p><img alt="jdkInstaller" title="jdkInstaller" src="images/manual_ejecucion/installer1.png" /></p>
+                    </li>
+                    <li>Seleccionamos la ubicacion en la que queremos que <strong>se almacene el JDK</strong> (recomendable no cambiar la ruta predeterminada) y continuamos.
+                        <p><img alt="jdkInstaller" title="jdkInstaller" src="images/manual_ejecucion/installer2.png" /></p>
+                        <ol>
+                            <li>Change: si deseamos cambiar la ruta donde se va a almacenar el JDK clicaremos aquí y seleccionaremos la ruta deseada.</li>
+                            <li>Next: al clicar sobre este botón avanzaremos al siguiente paso del proceso de instalación.</li>
+                        </ol>
+                    </li>
+                    <li>Nos saldrá una ventana con una barra de carga, <strong>esperamos a que termine</strong>.
+                        <p><img alt="jdkInstaller" title="jdkInstaller" src="images/manual_ejecucion/installer3.png" /></p>
+                    </li>
+                    <li>Una vez terminado el proceso de instalación, podremos <strong>acceder a la documentación</strong> o simplemente <strong>cerrar la ventana</strong>.
+                        <p><img alt="jdkInstaller" title="jdkInstaller" src="images/manual_ejecucion/installer4.png" /></p>
+                        <ol>
+                            <li>Next Steps: Al clicar sobre este botón se nos abrirá una pestaña del navegador con la documentacion del JDK 20.
+                                <p><img alt="jdkInstaller" title="jdkInstaller" src="images/manual_ejecucion/documentation.png" /></p>
+                            </li>
+                            <li>Close: cierra el asistente de instalación.</li>
+                        </ol>
+                    </li>
+                </ul>
+            </div>
+            <div class="overflow-hidden content-section" id="ejecucion">
+                <h1>Ejecucion de la aplicación utilizando la consola de comandos de windows (CMD).</h1>
+                <p>
+                    Aquí se esplica cómo <strong>se ejecuta</strong> la aplicacion utilizando la <strong>consola de comandos</strong> de windows.
+                </p>
+                <ul>
+                    <li>Escribimos <strong>CMD</strong> en la <strong>barra de búsqueda</strong>de windows y clicamos en la aplicación.
+                        <p><img alt="appLocation" title="appLocation" src="images/manual_ejecucion/windowsBar.png"/></p>
+                    </li>
+                    <li>Nos dirigimos a la <strong>ubicación</strong> en la que se encuentra la aplicación y hacemos click en la barra de busqueda superior para observar la ruta.
+                        <p><img alt="jdkInstaller" title="jdkInstaller" src="images/manual_ejecucion/appLocation.png" /></p>
+                    </li>
+                    <li>Dado que la CMD se encuentra posicionado en la <strong>unidad C:</strong> y la aplicación en la <strong>unidad F:</strong> introduciremos F: en la CMD
+                        para cambiar de unidad.
+                        <p><img alt="jdkInstaller" title="jdkInstaller" src="images/manual_ejecucion/unitChange.png" /></p>
+                    </li>
+                    <li>Dado que el directorio en el que <strong>se encuentra nuestra aplicación</strong> está en <strong>la raíz</strong> escribiremos <strong>'cd "Pure Forma APP"'</strong> para posicionarnos en el directorio de la app.
+                        <p><img alt="jdkInstaller" title="jdkInstaller" src="images/manual_ejecucion/cd.png" /></p>
+                    </li>
+                    <li>Ahora que estamos posicionados en la ubicación en la que se encuentra nuestra app, introduciremos el comando <strong>java -jar nombre_del_archivo.jar</strong> donde <strong>"nombre_del_archivo.jar"</strong> será cambiado por el nombre de nuestra app, 
+                        en este caso el comando quedaría de la siguiente forma <strong>"java -jar pureFoma.jar"</strong>.
+                        <p><img alt="jdkInstaller" title="jdkInstaller" src="images/manual_ejecucion/cmdExe.png" /></p>
+                    </li>
                 </ul>
             </div>
             
