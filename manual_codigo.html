@@ -75,6 +75,18 @@
                 <li class="scroll-to-link" data-target="controlador_regis_user">
                     <a>Controlador del Registro de Usuarios</a>
                 </li>
+                <li class="scroll-to-link" data-target="interfazGenericDAO">
+                    <a>Interfaz GenericDAO</a>
+                </li>
+                <li class="scroll-to-link" data-target="claseUserDAO">
+                    <a>Clase UserDAO</a>
+                </li>
+                <li class="scroll-to-link" data-target="claseAdminDAO">
+                    <a>Clase AdminDAO</a>
+                </li>
+                <li class="scroll-to-link" data-target="claseConnection">
+                    <a>Clase PostgreSQLConnection</a>
+                </li>
             </ul>
         </div>
     </div>
@@ -828,6 +840,207 @@
             <div class="centered-image">
                 <img src="images/manual_codigo/UserRegisterAndController/metodos_controller.png" alt="metodos_validacion">
                 <img src="images/manual_codigo/UserRegisterAndController/metodos_controller2.png" alt="metodos_validacion2">
+            </div>
+
+            <div class="overflow-hidden content-section" id="interfazGenericDAO">
+                <h1>Interfaz GenericDAO</h1>
+                <p>
+                    La interfaz <code>GenericDAO</code> define una serie de métodos estándar para realizar operaciones
+                    básicas de acceso a datos en una base de datos. Esta interfaz puede ser utilizada como un contrato
+                    genérico para operaciones CRUD en cualquier tipo de entidad (<code>T</code>).
+                </p>
+
+                <h3>Métodos:</h3>
+
+                <ol>
+                    <li>
+                        <h4><code>void insert(T entidad);</code></h4>
+                        <p>Este método se utiliza para insertar una nueva entidad en la base de datos. Debes
+                            proporcionar un objeto de tipo <code>T</code> que representa la entidad que deseas
+                            almacenar.</p>
+                    </li>
+                    <li>
+                        <h4><code>T getById(Integer id);</code></h4>
+                        <p>Recupera una entidad de la base de datos basándose en el ID proporcionado. El método devuelve
+                            un objeto de tipo <code>T</code> correspondiente al ID especificado.</p>
+                    </li>
+                    <li>
+                        <h4><code>List<T> getAll();</code></h4>
+                        <p>Retorna una lista de todas las entidades presentes en la base de datos. Este método es útil
+                            cuando necesitas obtener todas las filas de una tabla en la base de datos.</p>
+                    </li>
+                    <li>
+                        <h4><code>void update(T entidad);</code></h4>
+                        <p>Actualiza una entidad existente en la base de datos. Debes proporcionar un objeto de tipo
+                            <code>T</code> con los nuevos valores que deseas actualizar en la base de datos.
+                        </p>
+                    </li>
+                    <li>
+                        <h4><code>void delete(Integer id);</code></h4>
+                        <p>Elimina una entidad de la base de datos basándose en el ID proporcionado. Este método elimina
+                            la fila correspondiente a la entidad con el ID especificado.</p>
+                    </li>
+                </ol>
+
+                <img src="images/manual_codigo/interfaz_genericDAO/interfazGenericDAO.jpg" alt="interfazGenericDAO">
+
+            </div>
+
+            <div class="overflow-hidden content-section" id="claseUserDAO">
+                <h1>Clase UserDAO</h1>
+                <p>
+                    La clase <code>UserDAO</code> implementa la interfaz <code>GenericDAO</code> y proporciona métodos
+                    específicos para interactuar con la base de datos en el contexto de gestión de usuarios.
+                </p>
+
+                <h3>Métodos:</h3>
+
+                <ol>
+                    <li>
+                        <h4><code>void insert(User entidad);</code></h4>
+                        <p>Este método se utiliza para insertar un nuevo usuario en la base de datos. Verifica
+                            previamente si ya existe un usuario con el mismo username, email o phone antes de realizar
+                            la inserción.</p>
+                            <img src="images/manual_codigo/claseUserDAO/insertUserDAO.jpg" alt="insertUserDAO">
+                    </li>
+                    <li>
+                        <h4><code>User getById(Integer id);</code></h4>
+                        <p>Recupera un usuario de la base de datos basándose en el ID proporcionado.</p>
+                        <img src="images/manual_codigo/claseUserDAO/getByIdUserDAO.jpg" alt="getByIdUserDAO">
+                    </li>
+                    <li>
+                        <h4><code>List<User> getAll();</code></h4>
+                        <p>Retorna una lista de todos los usuarios presentes en la base de datos.</p>
+                        <img src="images/manual_codigo/claseUserDAO/getAllUserDAO.jpg" alt="getAllUserDAO">
+                    </li>
+                    <li>
+                        <h4><code>void update(User entidad);</code></h4>
+                        <p>Actualiza un usuario existente en la base de datos.</p>
+                        <img src="images/manual_codigo/claseUserDAO/updateUserDAO.jpg" alt="updateUserDAO">
+                    </li>
+                    <li>
+                        <h4><code>void delete(Integer id);</code></h4>
+                        <p>Elimina un usuario de la base de datos basándose en el ID proporcionado.</p>
+                        <img src="images/manual_codigo/claseUserDAO/deleteUserDao.jpg" alt="deleteUserDao">
+                    </li>
+                </ol>
+
+                <h3>Otros Métodos:</h3>
+
+                <ul>
+                    <li>
+                        <h4><code>boolean checkCredentials(String username, String password);</code></h4>
+                        <p>Verifica las credenciales de un usuario comparando el username y la contraseña proporcionados
+                            con los almacenados en la base de datos.</p>
+                            <img src="images/manual_codigo/claseUserDAO/checkCredentialsUserDao.jpg" alt="checkCredentialsUserDao">
+                    </li>
+                    <li>
+                        <h4><code>boolean userExists(String username, String email, String phone);</code></h4>
+                        <p>Verifica la existencia de un usuario con el mismo username, email o phone en la base de
+                            datos.</p>
+                            <img src="images/manual_codigo/claseUserDAO/userExistsUserDAO.jpg" alt="userExistsUserDAO">
+                    </li>
+                </ul>
+
+                <h3>Implementación:</h3>
+
+                <p>La clase utiliza JDBC para interactuar con la base de datos PostgreSQL y la biblioteca
+                    <code>jBCrypt</code> para el cifrado y verificación de contraseñas.
+                </p>
+                <img src="images/manual_codigo/claseUserDAO/conexionUserDAO.jpg" alt="conexionUserDAO">
+            </div>
+
+            <div class="overflow-hidden content-section" id="claseAdminDAO">
+                <h1>Clase AdminDAO</h1>
+                <p>
+                    La clase <code>AdminDAO</code> implementa la interfaz <code>GenericDAO</code> y proporciona
+                    métodos específicos para interactuar con la base de datos en el contexto de gestión de
+                    administradores.
+                </p>
+
+                <h3>Métodos:</h3>
+
+                <ol>
+                    <li>
+                        <h4><code>void insert(Admin entidad);</code></h4>
+                        <p>Este método se utiliza para insertar un nuevo administrador en la base de datos.</p>
+                        <img src="images/manual_codigo/claseAdminDAO/insertAdminDAO.jpg" alt="insertAdminDAO">
+                    </li>
+                    <li>
+                        <h4><code>Admin getById(Integer id);</code></h4>
+                        <p>Recupera un administrador de la base de datos basándose en el ID proporcionado.</p>
+                        <img src="images/manual_codigo/claseAdminDAO/getByIdAdminDAO.jpg" alt="getByIdAdminDAO">
+                    </li>
+                    <li>
+                        <h4><code>List<Admin> getAll();</code></h4>
+                        <p>Retorna una lista de todos los administradores presentes en la base de datos.</p>
+                        <img src="images/manual_codigo/claseAdminDAO/getAllAdminDAO.jpg" alt="getAllAdminDAO">
+                    </li>
+                    <li>
+                        <h4><code>void update(Admin entidad);</code></h4>
+                        <p>Actualiza un administrador existente en la base de datos.</p>
+                        <img src="images/manual_codigo/claseAdminDAO/updateAdminDAO.jpg" alt="updateAdminDAO">
+                    </li>
+                    <li>
+                        <h4><code>void delete(Integer id);</code></h4>
+                        <p>Elimina un administrador de la base de datos basándose en el ID proporcionado.</p>
+                        <img src="images/manual_codigo/claseAdminDAO/deleteAdminDAO.jpg" alt="deleteAdminDAO">
+                    </li>
+                </ol>
+
+                <h3>Otros Métodos:</h3>
+
+                <ul>
+                    <li>
+                        <h4><code>boolean checkCredentials(String username, String password);</code></h4>
+                        <p>Verifica las credenciales de un usuario comparando el username y la contraseña proporcionados
+                            con los almacenados en la base de datos.</p>
+                            <img src="images/manual_codigo/claseAdminDAO/checkCredentialsAdminDAO.jpg" alt="checkCredentialsAdminDAO">
+                    </li>
+                </ul>
+
+                <h3>Implementación:</h3>
+
+                <p>La clase utiliza JDBC para interactuar con la base de datos PostgreSQL y la biblioteca
+                    <code>jBCrypt</code> para el cifrado y verificación de contraseñas.
+                </p>
+                <img src="images/manual_codigo/claseAdminDAO/conexionAdminDAO.jpg" alt="conexionAdminDAO">
+            </div>
+
+            <div class="overflow-hidden content-section" id="claseConnection">
+                <h1>Clase PostgreSQLConnection</h1>
+                <p>La clase <code>PostgreSQLConnection</code> proporciona un método estático para obtener una conexión
+                    a la base de datos PostgreSQL. Utiliza JDBC para establecer la conexión con la base de datos.</p>
+
+                <h3>Métodos:</h3>
+
+                <ol>
+                    <li>
+                        <h4><code>Connection getConnection();</code></h4>
+                        <p>Este método estático devuelve una conexión a la base de datos PostgreSQL utilizando los
+                            parámetros de conexión predefinidos.</p>
+                    </li>
+                </ol>
+
+                <h3>Parámetros de Conexión:</h3>
+
+                <p>Los siguientes parámetros se utilizan para establecer la conexión a la base de datos PostgreSQL:</p>
+
+                <ul>
+                    <li>
+                        <h4><code>JDBC_URL:</code></h4>
+                        <p>URL JDBC que apunta a la base de datos PostgreSQL. En este caso, la URL está configurada para la base de datos <code>pureforma_db</code> en el servidor <code>dpg-cmj6u9vqd2ns7387meq0-a.frankfurt-postgres.render.com</code> en el puerto <code>5432</code>.</p>
+                    </li>
+                    <li>
+                        <h4><code>USER:</code></h4>
+                        <p>Usuario de la base de datos PostgreSQL.</p>
+                    </li>
+                    <li>
+                        <h4><code>PASSWORD:</code></h4>
+                        <p>Contraseña del usuario de la base de datos PostgreSQL.</p>
+                    </li>
+                </ul>
+                <img src="images/manual_codigo/claseConnection/clasePostgreSQLConnection.jpg" alt="clasePostgreSQLConnection">
             </div>
         </div>
     </div>
